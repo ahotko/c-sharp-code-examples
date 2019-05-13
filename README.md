@@ -15,7 +15,7 @@ A collection of code samples I have learned/collected when using C# and think th
   * "Ordinary" Dictionary
   * OrderedDictionary
   * SortedDictionary
-  * Abstract Class
-  * Interface
+* Abstract Class
+* Interface
 * Get current Class name
 * Get current Method Name
