@@ -1,5 +1,8 @@
 # C# Code Examples (mostly for myself)
 
+A collection of code samples I have learned/collected when using C# and think they might be useful in the future.
+
+## Categories
 * Patterns
   * Singleton Pattern
 * Syntactic Sugars
