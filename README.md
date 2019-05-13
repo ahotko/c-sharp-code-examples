@@ -19,3 +19,6 @@ A collection of code samples I have learned/collected when using C# and think th
 * Interface
 * Get current Class name
 * Get current Method Name
+* LINQ
+  * Sum
+  * Sum by Groups
