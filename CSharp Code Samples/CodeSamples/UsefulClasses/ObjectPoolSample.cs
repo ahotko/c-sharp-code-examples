@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Concurrent;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeSamples.UsefulClasses
 {
@@ -49,13 +45,13 @@ namespace CodeSamples.UsefulClasses
     }
     #endregion
 
-    public class ObjectPoolSample
+    public class ObjectPoolSample: SampleExecute
     {
         private ObjectPool<MyWorkerClass> _pool = new ObjectPool<MyWorkerClass>(() => new MyWorkerClass());
 
-        public void ObjectPoolExecute()
+        public override void Execute()
         {
-            Console.WriteLine($"ObjectPoolExecute");
+            Title($"ObjectPoolExecute");
             for(int i = 0; i < 5; i++)
             {
                 //only 1 worker class will be created and then reused
@@ -63,7 +59,7 @@ namespace CodeSamples.UsefulClasses
                 worker.DoSomething();
                 _pool.PutObject(worker);
             }
-            Console.WriteLine();
+            Finish();
         }
     }
 }

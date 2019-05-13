@@ -5,7 +5,7 @@ using System.Collections.Specialized;
 
 namespace CodeSamples.UsefulClasses
 {
-    public class DictionariesSample
+    public class DictionariesSample : SampleExecute
     {
         private Dictionary<int, string> _ordinaryDictionary = new Dictionary<int, string>();
         private OrderedDictionary _orderedDictionary = new OrderedDictionary();
@@ -32,11 +32,11 @@ namespace CodeSamples.UsefulClasses
             #endregion
         }
 
-        public void DictionariesExecute()
+        public override void Execute()
         {
             AddToDictionaries();
 
-            Console.WriteLine($"DictionariesExecute");
+            Title("DictionariesExecute");
             //Ordinary dictionary - key must be present; in this case, 1 is the key and should return string "one"
             //the order of elements is not fixed, usually the same as they were added
             foreach (KeyValuePair<int, string> ordinaryElement in _ordinaryDictionary)
@@ -50,7 +50,7 @@ namespace CodeSamples.UsefulClasses
             {
                 Console.WriteLine($"Ordered Dictionary (foreach): {orderedElement.Key} = {orderedElement.Value}");
             }
-            for (int i=0;i< _orderedDictionary.Count; i++)
+            for (int i = 0; i < _orderedDictionary.Count; i++)
             {
                 var orderedElement = _orderedDictionary[i];
                 Console.WriteLine($"Ordered Dictionary (index): {orderedElement}");
@@ -63,7 +63,7 @@ namespace CodeSamples.UsefulClasses
                 Console.WriteLine($"Sorted Dictionary: {sortedElement.Key} = {sortedElement.Value}");
             }
 
-            Console.WriteLine();
+            Finish();
         }
     }
 }
