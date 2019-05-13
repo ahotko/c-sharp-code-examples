@@ -45,6 +45,11 @@ namespace CodeSamples
             patts.Execute();
             #endregion
 
+            #region LINQ
+            var linqs = new LinqSample();
+            linqs.Execute();
+            #endregion
+
             Console.ReadKey();
         }
     }

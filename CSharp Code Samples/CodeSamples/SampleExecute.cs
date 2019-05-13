@@ -10,6 +10,11 @@ namespace CodeSamples
             Console.WriteLine("============================================================");
         }
 
+        public void LineBreak()
+        {
+            Console.WriteLine("============================================================");
+        }
+
         public void Finish()
         {
             Console.WriteLine("============================================================");

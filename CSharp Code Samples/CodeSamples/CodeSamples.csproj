@@ -58,6 +58,7 @@
     <Compile Include="TupleDeconstruction\User.cs" />
     <Compile Include="UsefulClasses\Dictionaries.cs" />
     <Compile Include="UsefulClasses\ObjectPoolSample.cs" />
+    <Compile Include="Useful\LinqSample.cs" />
     <Compile Include="Useful\UsefulSample.cs" />
   </ItemGroup>
   <ItemGroup>
