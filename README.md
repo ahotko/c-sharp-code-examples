@@ -1,8 +1,8 @@
 # C# Code Examples (mostly for myself)
 
-A collection of code samples I have learned/collected when using C# and think they might be useful in the future.
+A collection of code samples I have used C# and think they might be useful in the future.
 
-## Categories
+## Sample Categories
 * Patterns
   * Singleton Pattern
 * Syntactic Sugars
@@ -25,3 +25,24 @@ A collection of code samples I have learned/collected when using C# and think th
   * Ordering (asc, desc)
   * Skipping
   * Take N elements
+  
+  
+## Useful Libraries
+
+### Universal
+* Excel (Native)
+  * EPPlus (https://github.com/JanKallman/EPPlus)
+* QR Codes
+  * QRCoder (https://github.com/codebude/QRCoder)
+* PDF
+  * PdfFileWriter.NET (https://github.com/jeske/PdfFileWriter.NET)
+* JSON
+  * Json.NET (https://www.newtonsoft.com/json)
+  
+### WPF Specific
+* UI/UX
+  * Frameworks
+    * MahApps.Metro (https://github.com/MahApps/MahApps.Metro)
+	* Modern UI for WPF (https://github.com/firstfloorsoftware/mui)
+  * Iconpacks
+    * MahAppas.IconPack (https://github.com/MahApps/MahApps.Metro.IconPacks)
