@@ -9,12 +9,12 @@ A collection of code samples I have used C# and think they might be useful in th
   * Auto Property
   * Auto Property with default value
   * Property getter/setter
-* Tuple Deconstruction
+* [Tuple Deconstruction](https://docs.microsoft.com/en-us/dotnet/csharp/deconstruct)
 * Object Pool
 * Dictionaries
-  * "Ordinary" Dictionary
-  * OrderedDictionary
-  * SortedDictionary
+  * ["Ordinary" Dictionary](https://www.dotnetperls.com/dictionary)
+  * [OrderedDictionary](https://www.geeksforgeeks.org/c-sharp-ordereddictionary-class/)]
+  * [SortedDictionary](https://www.dotnetperls.com/sorteddictionary)
 * Abstract Class
 * Interface
 * Get current Class name
@@ -31,18 +31,18 @@ A collection of code samples I have used C# and think they might be useful in th
 
 ### Universal
 * Excel (Native)
-  * EPPlus (https://github.com/JanKallman/EPPlus)
+  * [EPPlus](https://github.com/JanKallman/EPPlus)
 * QR Codes
-  * QRCoder (https://github.com/codebude/QRCoder)
+  * [QRCoder](https://github.com/codebude/QRCoder)
 * PDF
-  * PdfFileWriter.NET (https://github.com/jeske/PdfFileWriter.NET)
+  * [PdfFileWriter.NET](https://github.com/jeske/PdfFileWriter.NET)
 * JSON
-  * Json.NET (https://www.newtonsoft.com/json)
+  * [Json.NET](https://www.newtonsoft.com/json)
   
 ### WPF Specific
 * UI/UX
   * Frameworks
-    * MahApps.Metro (https://github.com/MahApps/MahApps.Metro)
-	* Modern UI for WPF (https://github.com/firstfloorsoftware/mui)
+    * [MahApps.Metro](https://github.com/MahApps/MahApps.Metro)
+	* [Modern UI for WPF](https://github.com/firstfloorsoftware/mui)
   * Iconpacks
-    * MahAppas.IconPack (https://github.com/MahApps/MahApps.Metro.IconPacks)
+    * [MahAppas.IconPack](https://github.com/MahApps/MahApps.Metro.IconPacks)
