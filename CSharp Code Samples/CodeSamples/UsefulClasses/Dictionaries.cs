@@ -39,28 +39,33 @@ namespace CodeSamples.UsefulClasses
             Title("DictionariesExecute");
             //Ordinary dictionary - key must be present; in this case, 1 is the key and should return string "one"
             //the order of elements is not fixed, usually the same as they were added
+            Section("Ordinary Dictionary");
             foreach (KeyValuePair<int, string> ordinaryElement in _ordinaryDictionary)
             {
-                Console.WriteLine($"Ordinary Dictionary: {ordinaryElement.Key} = {ordinaryElement.Value}");
+                Console.WriteLine($"{ordinaryElement.Key} = {ordinaryElement.Value}");
             }
-            Console.WriteLine();
+            LineBreak();
 
             //Ordered dictionary - Maintains order of elements, by which they were inserted
+            Section("Ordered Dictionary (foreach)");
             foreach (DictionaryEntry orderedElement in _orderedDictionary)
             {
-                Console.WriteLine($"Ordered Dictionary (foreach): {orderedElement.Key} = {orderedElement.Value}");
+                Console.WriteLine($"{orderedElement.Key} = {orderedElement.Value}");
             }
+            LineBreak();
+            Section("Ordered Dictionary (index)");
             for (int i = 0; i < _orderedDictionary.Count; i++)
             {
                 var orderedElement = _orderedDictionary[i];
-                Console.WriteLine($"Ordered Dictionary (index): {orderedElement}");
+                Console.WriteLine($"{orderedElement}");
             }
-            Console.WriteLine();
+            LineBreak();
 
             //Sorted dictionary - elements are sorted by key
+            Section("Sorted Dictionary");
             foreach (KeyValuePair<int, string> sortedElement in _sortedDictionary)
             {
-                Console.WriteLine($"Sorted Dictionary: {sortedElement.Key} = {sortedElement.Value}");
+                Console.WriteLine($"{sortedElement.Key} = {sortedElement.Value}");
             }
 
             Finish();

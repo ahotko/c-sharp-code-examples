@@ -143,6 +143,18 @@ namespace CodeSamples.Useful
             Console.WriteLine($"Sum without Select = {sumAge}");
         }
 
+        private void AverageAge()
+        {
+            double avgAge = _sampleList.Select(x => x.Age).Average();
+            Console.WriteLine($"Average = {avgAge:N1}");
+            //...or...
+            avgAge = _sampleList.Select(x => x.Age).Where(x => x > 5).Average();
+            Console.WriteLine($"Average when (age > 5) = {avgAge:N1}");
+            //...or...
+            avgAge = _sampleList.Where(x => x.Age > 10).Select(x => x.Age).Average();
+            Console.WriteLine($"Average when (age > 10) = {avgAge:N1}");
+        }
+
         private void SumAgeByLastnameGrouping()
         {
             var ageLastnameGroups =
@@ -301,6 +313,8 @@ namespace CodeSamples.Useful
         {
             Title("LinqSampleExecute");
             SumAgeSimple();
+            LineBreak();
+            AverageAge();
             LineBreak();
             Section("Group by LastName");
             SumAgeByLastnameGrouping();
