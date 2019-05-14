@@ -158,7 +158,27 @@ namespace CodeSamples.Useful
             //use result
             foreach (var sample in ageLastnameGroups)
             {
-                Console.WriteLine($"Lastname = {sample.Group}, {sample.CountMembers} members, SumAge = {sample.SumAge}");
+                Console.WriteLine($"Lastname = {sample.Group}, {sample.CountMembers} member(s), SumAge = {sample.SumAge}");
+            }
+        }
+
+
+        private void SumAgeByLastnameGroupingOrderedDescending()
+        {
+            var ageLastnameGroups =
+                (from sample in _sampleList
+                 group sample by sample.LastName into sampleGroup
+                 select
+                 new
+                 {
+                     Group = sampleGroup.Key,
+                     SumAge = sampleGroup.Sum(x => x.Age),
+                     CountMembers = sampleGroup.Count()
+                 }).OrderByDescending(x => x.CountMembers);
+            //use result
+            foreach (var sample in ageLastnameGroups)
+            {
+                Console.WriteLine($"Lastname = {sample.Group}, {sample.CountMembers} member(s), SumAge = {sample.SumAge}");
             }
         }
 
@@ -177,7 +197,103 @@ namespace CodeSamples.Useful
             //use result
             foreach (var sample in ageLastnameGroups)
             {
-                Console.WriteLine($"Lastname = {sample.GroupingKey.LastName}, Place = {sample.GroupingKey.Place}, {sample.CountMembers} members, SumAge = {sample.SumAge}");
+                Console.WriteLine($"Lastname = {sample.GroupingKey.LastName}, Place = {sample.GroupingKey.Place}, {sample.CountMembers} member(s), SumAge = {sample.SumAge}");
+            }
+        }
+
+        private void SumAgeByLastnameAndPlaceGroupingOrdered()
+        {
+            var ageLastnameGroups =
+                (from sample in _sampleList
+                 group sample by new { sample.LastName, sample.Place } into sampleGroup
+                 select
+                 new
+                 {
+                     GroupingKey = sampleGroup.Key,
+                     SumAge = sampleGroup.Sum(x => x.Age),
+                     CountMembers = sampleGroup.Count()
+                 }).OrderBy(x => x.CountMembers);
+            //use result
+            foreach (var sample in ageLastnameGroups)
+            {
+                Console.WriteLine($"Lastname = {sample.GroupingKey.LastName}, Place = {sample.GroupingKey.Place}, {sample.CountMembers} member(s), SumAge = {sample.SumAge}");
+            }
+        }
+
+        private void SumAgeByLastnameAndPlaceGroupingOrderedTop5()
+        {
+            var ageLastnameGroups =
+                (from sample in _sampleList
+                 group sample by new { sample.LastName, sample.Place } into sampleGroup
+                 select
+                 new
+                 {
+                     GroupingKey = sampleGroup.Key,
+                     SumAge = sampleGroup.Sum(x => x.Age),
+                     CountMembers = sampleGroup.Count()
+                 }).OrderByDescending(x => x.CountMembers).Take(5);
+            //use result
+            foreach (var sample in ageLastnameGroups)
+            {
+                Console.WriteLine($"Lastname = {sample.GroupingKey.LastName}, Place = {sample.GroupingKey.Place}, {sample.CountMembers} member(s), SumAge = {sample.SumAge}");
+            }
+        }
+
+        private void SumAgeByLastnameAndPlaceGroupingOrderedSecond5()
+        {
+            var ageLastnameGroups =
+                (from sample in _sampleList
+                 group sample by new { sample.LastName, sample.Place } into sampleGroup
+                 select
+                 new
+                 {
+                     GroupingKey = sampleGroup.Key,
+                     SumAge = sampleGroup.Sum(x => x.Age),
+                     CountMembers = sampleGroup.Count()
+                 }).OrderByDescending(x => x.CountMembers).Skip(5).Take(5);
+            //use result
+            foreach (var sample in ageLastnameGroups)
+            {
+                Console.WriteLine($"Lastname = {sample.GroupingKey.LastName}, Place = {sample.GroupingKey.Place}, {sample.CountMembers} member(s), SumAge = {sample.SumAge}");
+            }
+        }
+
+        private void SumAgeByLastnameAndPlaceGroupingOrderedLast5()
+        {
+            var ageLastnameGroups =
+                (from sample in _sampleList
+                 group sample by new { sample.LastName, sample.Place } into sampleGroup
+                 select
+                 new
+                 {
+                     GroupingKey = sampleGroup.Key,
+                     SumAge = sampleGroup.Sum(x => x.Age),
+                     CountMembers = sampleGroup.Count()
+                 }).OrderByDescending(x => x.CountMembers);
+            var last5AgeLastnameGroups = ageLastnameGroups.Skip(Math.Max(0, ageLastnameGroups.Count() - 5));
+            //use result
+            foreach (var sample in last5AgeLastnameGroups)
+            {
+                Console.WriteLine($"Lastname = {sample.GroupingKey.LastName}, Place = {sample.GroupingKey.Place}, {sample.CountMembers} member(s), SumAge = {sample.SumAge}");
+            }
+        }
+
+        private void SumAgeByLastnameAndPlaceGroupingOrderedTwice()
+        {
+            var ageLastnameGroups =
+                (from sample in _sampleList
+                 group sample by new { sample.LastName, sample.Place } into sampleGroup
+                 select
+                 new
+                 {
+                     GroupingKey = sampleGroup.Key,
+                     SumAge = sampleGroup.Sum(x => x.Age),
+                     CountMembers = sampleGroup.Count()
+                 }).OrderBy(x => x.GroupingKey.Place).ThenBy(x => x.CountMembers);
+            //use result
+            foreach (var sample in ageLastnameGroups)
+            {
+                Console.WriteLine($"Lastname = {sample.GroupingKey.LastName}, Place = {sample.GroupingKey.Place}, {sample.CountMembers} member(s), SumAge = {sample.SumAge}");
             }
         }
 
@@ -186,9 +302,29 @@ namespace CodeSamples.Useful
             Title("LinqSampleExecute");
             SumAgeSimple();
             LineBreak();
+            Section("Group by LastName");
             SumAgeByLastnameGrouping();
             LineBreak();
+            Section("Group by LastName and Place");
             SumAgeByLastnameAndPlaceGrouping();
+            LineBreak();
+            Section("Group by LastName (ordered by member count, desc)");
+            SumAgeByLastnameGroupingOrderedDescending();
+            LineBreak();
+            Section("Group by LastName and Place (ordered by member count)");
+            SumAgeByLastnameAndPlaceGroupingOrdered();
+            LineBreak();
+            Section("Group by LastName and Place (ordered by place and member count)");
+            SumAgeByLastnameAndPlaceGroupingOrderedTwice();
+            LineBreak();
+            Section("Group by LastName and Place (top 5, ordered by member count)");
+            SumAgeByLastnameAndPlaceGroupingOrderedTop5();
+            LineBreak();
+            Section("Group by LastName and Place (records 6..10, ordered by member count)");
+            SumAgeByLastnameAndPlaceGroupingOrderedSecond5();
+            LineBreak();
+            Section("Group by LastName and Place (last 5, ordered by member count)");
+            SumAgeByLastnameAndPlaceGroupingOrderedLast5();
             Finish();
         }
     }

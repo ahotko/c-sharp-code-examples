@@ -22,3 +22,6 @@ A collection of code samples I have learned/collected when using C# and think th
 * LINQ
   * Sum
   * Sum by Groups
+  * Ordering (asc, desc)
+  * Skipping
+  * Take N elements
