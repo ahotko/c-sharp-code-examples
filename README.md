@@ -13,7 +13,7 @@ A collection of code samples I have used C# and think they might be useful in th
 * Object Pool
 * Dictionaries
   * ["Ordinary" Dictionary](https://www.dotnetperls.com/dictionary)
-  * [OrderedDictionary](https://www.geeksforgeeks.org/c-sharp-ordereddictionary-class/)]
+  * [OrderedDictionary](https://www.geeksforgeeks.org/c-sharp-ordereddictionary-class/)
   * [SortedDictionary](https://www.dotnetperls.com/sorteddictionary)
 * Abstract Class
 * Interface
