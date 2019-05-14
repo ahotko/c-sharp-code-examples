@@ -30,9 +30,15 @@ namespace CodeSamples
             objectPool.Execute();
             #endregion
 
-            #region Properties
+            #region Syntactic Sugars
             var props = new PropertiesSample();
             props.Execute();
+
+            var usings = new UsingSample();
+            usings.Execute();
+
+            var interpol = new StringInterpolationSample();
+            interpol.Execute();
             #endregion
 
             #region Useful
@@ -48,7 +54,7 @@ namespace CodeSamples
             #region LINQ
             var linqs = new LinqSample();
             linqs.Execute();
-            #endregion
+            # endregion
 
             Console.ReadKey();
         }

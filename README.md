@@ -9,6 +9,7 @@ A collection of code samples I have used C# and think they might be useful in th
   * Auto Property
   * Auto Property with default value
   * Property getter/setter
+  * String Interpolation
 * [Tuple Deconstruction](https://docs.microsoft.com/en-us/dotnet/csharp/deconstruct)
 * Object Pool
 * Dictionaries
@@ -45,4 +46,4 @@ A collection of code samples I have used C# and think they might be useful in th
     * [MahApps.Metro](https://github.com/MahApps/MahApps.Metro)
 	* [Modern UI for WPF](https://github.com/firstfloorsoftware/mui)
   * Iconpacks
-    * [MahAppas.IconPack](https://github.com/MahApps/MahApps.Metro.IconPacks)
+    * [MahApps.IconPack](https://github.com/MahApps/MahApps.Metro.IconPacks)
