@@ -10,11 +10,11 @@ A collection of code samples I have used C# and think they might be useful in th
   * Auto Property with default value
   * Property getter/setter
   * String Interpolation
-* [Tuple Deconstruction](https://docs.microsoft.com/en-us/dotnet/csharp/deconstruct)
+* [Tuple Deconstruction](https://docs.microsoft.com/en-us/dotnet/csharp/deconstruct) (needs [System.Collections.Specialized](https://www.nuget.org/packages/System.Collections.Specialized/))
 * Object Pool
 * Dictionaries
   * ["Ordinary" Dictionary](https://www.dotnetperls.com/dictionary)
-  * [OrderedDictionary](https://www.geeksforgeeks.org/c-sharp-ordereddictionary-class/)
+  * [OrderedDictionary](https://www.geeksforgeeks.org/c-sharp-ordereddictionary-class/) (needs [System.ValueTuple](https://www.nuget.org/packages/System.ValueTuple/))
   * [SortedDictionary](https://www.dotnetperls.com/sorteddictionary)
 * Abstract Class
 * Interface
