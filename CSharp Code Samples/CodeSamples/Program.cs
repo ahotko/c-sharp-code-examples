@@ -39,6 +39,9 @@ namespace CodeSamples
 
             var interpol = new StringInterpolationSample();
             interpol.Execute();
+
+            var patterns = new PatternMatchingSample();
+            patterns.Execute();
             #endregion
 
             #region Useful

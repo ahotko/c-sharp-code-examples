@@ -26,6 +26,9 @@ namespace CodeSamples.SyntacticSugars
             get => _propertyName;
             set => _propertyName = value;
         }
+
+        //expression bodied members
+        public string ExpressionMember => $"{PropertyNameLong} {PropertyNameShort}";
         #endregion
 
         public string AutoProperty { get; set; }
@@ -37,6 +40,7 @@ namespace CodeSamples.SyntacticSugars
             Title("PropertiesExecute");
             Console.WriteLine($"PropertyNameLong = {PropertyNameLong}");
             Console.WriteLine($"PropertyNameShort = {PropertyNameShort}");
+            Console.WriteLine($"ExpressionMember = {ExpressionMember}");
             Console.WriteLine($"AutoProperty = {AutoProperty}");
             Console.WriteLine($"AutoPropertyDefaultValueEmpty = {AutoPropertyDefaultValueEmpty}");
             Console.WriteLine($"AutoPropertyDefaultValueNotEmpty = {AutoPropertyDefaultValueNotEmpty}");
