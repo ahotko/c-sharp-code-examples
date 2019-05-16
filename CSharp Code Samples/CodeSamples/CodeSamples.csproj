@@ -50,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alterations\EntityConversionSample.cs" />
+    <Compile Include="Alterations\OperatorOverloadingSample.cs" />
     <Compile Include="ISampleExecute.cs" />
     <Compile Include="Patterns\PatternsSample.cs" />
     <Compile Include="Patterns\SingletonPattern.cs" />
@@ -61,7 +63,6 @@
     <Compile Include="SyntacticSugars\StringInterpolationSample.cs" />
     <Compile Include="SyntacticSugars\UsingSample.cs" />
     <Compile Include="TupleDeconstruction\TupleDeconstruction.cs" />
-    <Compile Include="TupleDeconstruction\User.cs" />
     <Compile Include="UsefulClasses\Dictionaries.cs" />
     <Compile Include="UsefulClasses\ObjectPoolSample.cs" />
     <Compile Include="Useful\LinqSample.cs" />

@@ -1,13 +1,10 @@
-﻿using CodeSamples.Patterns;
+﻿using CodeSamples.Alterations;
+using CodeSamples.Patterns;
 using CodeSamples.SyntacticSugars;
 using CodeSamples.TupleDeconstruction;
 using CodeSamples.Useful;
 using CodeSamples.UsefulClasses;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeSamples
 {
@@ -15,6 +12,11 @@ namespace CodeSamples
     {
         static void Main(string[] args)
         {
+            Console.Title = "C# Code Samples";
+
+            Console.WriteLine("Start Code Samples");
+            Console.WriteLine();
+
             #region Tuple Deconstruction
             var tupleDecon = new TupleDeconstructionSample();
             tupleDecon.Execute();
@@ -57,7 +59,20 @@ namespace CodeSamples
             #region LINQ
             var linqs = new LinqSample();
             linqs.Execute();
-            # endregion
+            #endregion
+
+            #region Operators
+            var opera = new OperatorOverloadingSample();
+            opera.Execute();
+            #endregion
+
+            #region Entity Conversion
+            var entityConv = new EntityConversionSample();
+            entityConv.Execute();
+            #endregion
+
+            Console.WriteLine();
+            Console.WriteLine("End Code Samples");
 
             Console.ReadKey();
         }

@@ -26,7 +26,8 @@ A collection of code samples I have used C# and think they might be useful in th
   * Ordering (asc, desc)
   * Skipping
   * Take N elements
-  
+* Operator Overloading
+* Implicit/Explicit Conversion operators
   
 ## Useful Libraries
 
