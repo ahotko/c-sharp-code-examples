@@ -20,7 +20,7 @@ A collection of code samples I have used C# and think they might be useful in th
 * Interface
 * Get current Class name
 * Get current Method Name
-* LINQ
+* [LINQ](CSharp Code Samples/CodeSamples/Useful/LinqSample.cs)
   * Sum
   * Sum by Groups
   * Ordering (asc, desc)

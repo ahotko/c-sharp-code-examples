@@ -39,6 +39,16 @@ namespace CodeSamples.Alterations
             return result;
         }
 
+        public static bool operator true(CalculationClass value)
+        {
+            return value.A != 0;
+        }
+
+        public static bool operator false(CalculationClass value)
+        {
+            return value.A == 0;
+        }
+
         public static Boolean operator ==(CalculationClass firstValue, CalculationClass secondValue)
         {
             return (firstValue.A == secondValue.A);
@@ -79,6 +89,7 @@ namespace CodeSamples.Alterations
             Title("OperatorOverloadingSampleExecute");
             CalculationClass A = new CalculationClass() { A = 100 };
             CalculationClass B = new CalculationClass() { A = 3 };
+            CalculationClass C = new CalculationClass() { A = 0 };
             var sum = A + B;
             var diff = A - B;
             var product = A * B;
@@ -93,6 +104,9 @@ namespace CodeSamples.Alterations
             Console.WriteLine($"Coeff    => A / B  = {coeff}");
             Console.WriteLine($"Equal    => A == B = {equal}");
             Console.WriteLine($"notEqual => A != B = {notEqual}");
+            Console.WriteLine($"true/false => A = {(A ? "true" : "false")}");
+            Console.WriteLine($"true/false => B = {(B ? "true" : "false")}");
+            Console.WriteLine($"true/false => C (=) = {(C ? "true" : "false")}");
             //
             Finish();
         }
