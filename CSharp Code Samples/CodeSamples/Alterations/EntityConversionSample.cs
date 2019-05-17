@@ -21,7 +21,7 @@ namespace CodeSamples.Alterations
     {
         public int ValueTwo { get; set; } = 2;
 
-        //explicit operators do not require explicit cast
+        //explicit operators DOES require cast
         public static explicit operator EntityOne(EntityTwo entity)
         {
             var entityOne = new EntityOne()
