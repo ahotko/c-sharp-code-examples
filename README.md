@@ -16,11 +16,11 @@ A collection of code samples I have used C# and think they might be useful in th
   * ["Ordinary" Dictionary](https://www.dotnetperls.com/dictionary)
   * [OrderedDictionary](https://www.geeksforgeeks.org/c-sharp-ordereddictionary-class/) (needs [System.Collections.Specialized](https://www.nuget.org/packages/System.Collections.Specialized/))
   * [SortedDictionary](https://www.dotnetperls.com/sorteddictionary)
-* Abstract Class
-* Interface
+* [Abstract Class](CSharp%20Code%20Samples/CodeSamples/SampleExecute.cs)
+* [Interface](CSharp%20Code%20Samples/CodeSamples/ISampleExecute.cs)
 * Get current Class name
 * Get current Method Name
-* [LINQ](CSharp Code Samples/CodeSamples/Useful/LinqSample.cs)
+* [LINQ](CSharp%20Code%20Samples/CodeSamples/Useful/LinqSample.cs)
   * Sum
   * Sum by Groups
   * Ordering (asc, desc)
