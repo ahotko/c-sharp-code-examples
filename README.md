@@ -20,8 +20,10 @@ A collection of code samples I have used C# and think they might be useful in th
   * [SortedDictionary](CSharp%20Code%20Samples/CodeSamples/UsefulClasses/Dictionaries.cs#L65) Additional links: [Link](https://www.dotnetperls.com/sorteddictionary)
 * [Abstract Class](CSharp%20Code%20Samples/CodeSamples/SampleExecute.cs)
 * [Interface](CSharp%20Code%20Samples/CodeSamples/ISampleExecute.cs)
-* [Get current Class name](CSharp%20Code%20Samples/CodeSamples/Useful/UsefulSample.cs#L9)
-* [Get current Method Name](CSharp%20Code%20Samples/CodeSamples/Useful/UsefulSample.cs#L10)
+* [Classes](CSharp%20Code%20Samples/CodeSamples/Classes)
+  * [Get current Class name](CSharp%20Code%20Samples/CodeSamples/Classes/ClassAndMethodNamesSample.cs#L9)
+  * [Get current Method Name](CSharp%20Code%20Samples/CodeSamples/Classes/ClassAndMethodNamesSample.cs#L10)
+  * [Constructor Chaining](CSharp%20Code%20Samples/CodeSamples/Classes/ConstructorChainingSample.cs)
 * [LINQ](CSharp%20Code%20Samples/CodeSamples/Useful/LinqSample.cs)
   * Sum
   * Sum by Groups

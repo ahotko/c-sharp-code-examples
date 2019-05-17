@@ -1,4 +1,5 @@
 ﻿using CodeSamples.Alterations;
+using CodeSamples.Classes;
 using CodeSamples.Patterns;
 using CodeSamples.SyntacticSugars;
 using CodeSamples.TupleDeconstruction;
@@ -47,7 +48,7 @@ namespace CodeSamples
             #endregion
 
             #region Useful
-            var useful = new UsefulSample();
+            var useful = new ClassAndMethodNamesSample();
             useful.Execute();
             #endregion
 
@@ -69,6 +70,11 @@ namespace CodeSamples
             #region Entity Conversion
             var entityConv = new EntityConversionSample();
             entityConv.Execute();
+            #endregion
+
+            #region Classes
+            var consChain = new ConstructorChainingSample();
+            consChain.Execute();
             #endregion
 
             Console.WriteLine();

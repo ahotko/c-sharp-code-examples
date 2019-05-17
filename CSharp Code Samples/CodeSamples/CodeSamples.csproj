@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Alterations\EntityConversionSample.cs" />
     <Compile Include="Alterations\OperatorOverloadingSample.cs" />
+    <Compile Include="Classes\ConstructorChainingSample.cs" />
     <Compile Include="ISampleExecute.cs" />
     <Compile Include="Patterns\PatternsSample.cs" />
     <Compile Include="Patterns\SingletonPattern.cs" />
@@ -66,7 +67,7 @@
     <Compile Include="UsefulClasses\Dictionaries.cs" />
     <Compile Include="UsefulClasses\ObjectPoolSample.cs" />
     <Compile Include="Useful\LinqSample.cs" />
-    <Compile Include="Useful\UsefulSample.cs" />
+    <Compile Include="Classes\ClassAndMethodNamesSample.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
