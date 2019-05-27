@@ -16,15 +16,15 @@ A collection of code samples I have used C# and think they might be useful in th
 * [Object Pool](CSharp%20Code%20Samples/CodeSamples/UsefulClasses/ObjectPoolSample.cs)
 * [Dictionaries](CSharp%20Code%20Samples/CodeSamples/UsefulClasses/Dictionaries.cs)
   * ["Ordinary" Dictionary](CSharp%20Code%20Samples/CodeSamples/UsefulClasses/Dictionaries.cs#L42) Additional links: [Link](https://www.dotnetperls.com/dictionary)
-  * [OrderedDictionary](CSharp%20Code%20Samples/CodeSamples/UsefulClasses/Dictionaries.cs#L50) (requires [System.Collections.Specialized](https://www.nuget.org/packages/System.Collections.Specialized/)); Additional links: [Link](https://www.geeksforgeeks.org/c-sharp-ordereddictionary-class/)
-  * [SortedDictionary](CSharp%20Code%20Samples/CodeSamples/UsefulClasses/Dictionaries.cs#L65) Additional links: [Link](https://www.dotnetperls.com/sorteddictionary)
+  * [`OrderedDictionary`](CSharp%20Code%20Samples/CodeSamples/UsefulClasses/Dictionaries.cs#L50) (requires [System.Collections.Specialized](https://www.nuget.org/packages/System.Collections.Specialized/)); Additional links: [Link](https://www.geeksforgeeks.org/c-sharp-ordereddictionary-class/)
+  * [`SortedDictionary`](CSharp%20Code%20Samples/CodeSamples/UsefulClasses/Dictionaries.cs#L65) Additional links: [Link](https://www.dotnetperls.com/sorteddictionary)
 * [Abstract Class](CSharp%20Code%20Samples/CodeSamples/SampleExecute.cs)
 * [Interface](CSharp%20Code%20Samples/CodeSamples/ISampleExecute.cs)
 * [Classes](CSharp%20Code%20Samples/CodeSamples/Classes)
   * [Get current Class name](CSharp%20Code%20Samples/CodeSamples/Classes/ClassAndMethodNamesSample.cs#L9)
   * [Get current Method Name](CSharp%20Code%20Samples/CodeSamples/Classes/ClassAndMethodNamesSample.cs#L10)
   * [Constructor Chaining](CSharp%20Code%20Samples/CodeSamples/Classes/ConstructorChainingSample.cs)
-* [LINQ](CSharp%20Code%20Samples/CodeSamples/Useful/LinqSample.cs)
+* [`LINQ`](CSharp%20Code%20Samples/CodeSamples/Useful/LinqSample.cs)
   * Sum
   * Sum by Groups
   * Ordering (asc, desc)
