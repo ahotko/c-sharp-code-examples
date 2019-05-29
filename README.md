@@ -44,6 +44,7 @@ A collection of code samples I have used C# and think they might be useful in th
   * [PdfFileWriter.NET](https://github.com/jeske/PdfFileWriter.NET)
 * JSON
   * [Json.NET](https://www.newtonsoft.com/json)
+  * [Jil - Fast .NET JSON (De)Serializer, Built On Sigil](https://github.com/kevin-montrose/Jil)
   
 ### WPF Specific
 * UI/UX
