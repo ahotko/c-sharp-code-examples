@@ -1,5 +1,7 @@
 ﻿using CodeSamples.Alterations;
+using CodeSamples.Attributes;
 using CodeSamples.Classes;
+using CodeSamples.MultiThreading;
 using CodeSamples.Patterns;
 using CodeSamples.SyntacticSugars;
 using CodeSamples.TupleDeconstruction;
@@ -75,6 +77,19 @@ namespace CodeSamples
             #region Classes
             var consChain = new ConstructorChainingSample();
             consChain.Execute();
+            #endregion
+
+            #region Attributes
+            var debuggerAttributeSample = new DebuggingSample();
+            debuggerAttributeSample.Execute();
+
+            var oboleteAttributeSample = new ObsoleteSample();
+            oboleteAttributeSample.Execute();
+            #endregion
+
+            #region Threading
+            var backgroundWorkerSample = new BackgroundWorkerSample();
+            backgroundWorkerSample.Execute();
             #endregion
 
             Console.WriteLine();

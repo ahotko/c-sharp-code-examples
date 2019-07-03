@@ -52,8 +52,11 @@
   <ItemGroup>
     <Compile Include="Alterations\EntityConversionSample.cs" />
     <Compile Include="Alterations\OperatorOverloadingSample.cs" />
+    <Compile Include="Attributes\ObsoleteSample.cs" />
     <Compile Include="Classes\ConstructorChainingSample.cs" />
+    <Compile Include="Attributes\DebuggingSample.cs" />
     <Compile Include="ISampleExecute.cs" />
+    <Compile Include="MultiThreading\BackgroundWorkerSample.cs" />
     <Compile Include="Patterns\PatternsSample.cs" />
     <Compile Include="Patterns\SingletonPattern.cs" />
     <Compile Include="Program.cs" />

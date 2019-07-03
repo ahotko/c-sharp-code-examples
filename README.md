@@ -32,6 +32,12 @@ A collection of code samples I have used C# and think they might be useful in th
   * Take N elements
 * [Operator Overloading](CSharp%20Code%20Samples/CodeSamples/Alterations/OperatorOverloadingSample.cs)
 * [Implicit/Explicit Conversion operators](CSharp%20Code%20Samples/CodeSamples/Alterations/EntityConversionSample.cs)
+* [Attributes and Conditionals](CSharp%20Code%20Samples/CodeSamples/Attributes)
+  * [Debugger](CSharp%20Code%20Samples/CodeSamples/Attributes/DebuggingSample.cs)
+  * [Obsolete](CSharp%20Code%20Samples/CodeSamples/Attributes/ObsoleteSample.cs)
+* [Threading](CSharp%20Code%20Samples/CodeSamples/MultiThreading)
+  * [`BackgroundWorker`](CSharp%20Code%20Samples/CodeSamples/MultiThreading/BackgroundWorkerSample.cs)
+
   
 ## Useful Libraries
 
@@ -45,6 +51,8 @@ A collection of code samples I have used C# and think they might be useful in th
 * JSON
   * [Json.NET](https://www.newtonsoft.com/json)
   * [Jil - Fast .NET JSON (De)Serializer, Built On Sigil](https://github.com/kevin-montrose/Jil)
+* Logging
+  * [NLog](https://nlog-project.org/)
   
 ### WPF Specific
 * UI/UX
