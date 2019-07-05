@@ -7,8 +7,32 @@ using System.Diagnostics;
 
 namespace CodeSamples.Attributes
 {
+    sealed class FullName
+    {
+        public FullName(string firstName, string lastName)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+        }
+
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+    }
+
+    sealed class DebuggerExamplesDebuggerBrowsable
+    {
+        [DebuggerBrowsable(DebuggerBrowsableState.Collapsed)]
+        public string UsernameProperty { get; set; }
+
+        [DebuggerBrowsable(DebuggerBrowsableState.Never)]
+        public string HiddenInDebuggerWindow { get; set; }
+
+        [DebuggerBrowsable(DebuggerBrowsableState.RootHidden)]
+        public FullName OnlyPropertiesOfClassVisibleInDebuggerWindow { get; set; }
+    }
+
     [DebuggerDisplay("StringValue = {StringValue}, IntValue = {GetIntValue()}")]
-    sealed class DebuggerExamples
+    sealed class DebuggerExamplesDebuggerDisplay
     {
         public string StringValue { get; set; } = "SomeStringValue";
         public int GetIntValue()
@@ -61,7 +85,7 @@ namespace CodeSamples.Attributes
         {
             Title("DebuggingSampleExecute");
             Section("Creating class (if breakpoint is used here, debugger output will be formatted as in DebuggerDisplay())");
-            DebuggerExamples debuggerExample = new DebuggerExamples();
+            DebuggerExamplesDebuggerDisplay debuggerExample = new DebuggerExamplesDebuggerDisplay();
             //set breakpoint on next line and hover over "debuggerExample" variable
             debuggerExample.DebuggerStepThroughMethod();
             debuggerExample.ExecuteOnlyInDebugMode();
