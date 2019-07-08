@@ -38,9 +38,9 @@ A collection of code samples I have used C# and think they might be useful in th
 	* [`DebuggerBrowsable`](CSharp%20Code%20Samples/CodeSamples/Attributes/DebuggingSample.cs)
 	* [`Conditional`](CSharp%20Code%20Samples/CodeSamples/Attributes/DebuggingSample.cs)
 	* [`#if - #define - #endif`](CSharp%20Code%20Samples/CodeSamples/Attributes/DebuggingSample.cs)
-  * [Obsolete](CSharp%20Code%20Samples/CodeSamples/Attributes/ObsoleteSample.cs)
-    * [Compiler Warning - `Obsolete("...", false`](CSharp%20Code%20Samples/CodeSamples/Attributes/ObsoleteSample.cs)
-	* [Compiler Error - `Obsolete("...", true`](CSharp%20Code%20Samples/CodeSamples/Attributes/ObsoleteSample.cs)
+  * [`Obsolete`](CSharp%20Code%20Samples/CodeSamples/Attributes/ObsoleteSample.cs)
+    * [Compiler Warning](CSharp%20Code%20Samples/CodeSamples/Attributes/ObsoleteSample.cs)
+	* [Compiler Error](CSharp%20Code%20Samples/CodeSamples/Attributes/ObsoleteSample.cs)
 * [Threading](CSharp%20Code%20Samples/CodeSamples/MultiThreading)
   * [`BackgroundWorker`](CSharp%20Code%20Samples/CodeSamples/MultiThreading/BackgroundWorkerSample.cs)
 
