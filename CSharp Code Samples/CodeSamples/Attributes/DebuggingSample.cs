@@ -21,8 +21,19 @@ namespace CodeSamples.Attributes
 
     sealed class DebuggerExamplesDebuggerBrowsable
     {
+        /// <summary>
+        /// DebuggerBrowsableState.Collapsed - This signifies that the default behaviour should be used for the decorated member and 
+        ///      gives the equivalent results as when the attribute is omitted. When viewed in a debugging tool the member is visible 
+        ///      and can be expanded to allow access to any further members that it contains.
+        /// DebuggerBrowsableState.Never - This indicates that the member should not be displayed in debugging windows. The member is 
+        ///      hidden from view completely.
+        /// DebuggerBrowsableState.RootHidden - This signifies that the member should not be visible but that its own members should be. 
+        ///      The members of the hidden item appear as if they were one level higher in the hierarchy of values. This setting is useful 
+        ///      for members that are used only to store structured information, such as collection types or some data objects.
+        /// </summary>
+
         [DebuggerBrowsable(DebuggerBrowsableState.Collapsed)]
-        public string UsernameProperty { get; set; }
+        public string StandardProperty { get; set; }
 
         [DebuggerBrowsable(DebuggerBrowsableState.Never)]
         public string HiddenInDebuggerWindow { get; set; }
