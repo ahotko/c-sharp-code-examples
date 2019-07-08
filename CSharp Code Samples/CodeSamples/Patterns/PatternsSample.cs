@@ -1,4 +1,7 @@
-﻿namespace CodeSamples.Patterns
+﻿using CodeSamples.Patterns.Behavioral;
+using CodeSamples.Patterns.Creational;
+
+namespace CodeSamples.Patterns
 {
     public class PatternsSample : SampleExecute
     {

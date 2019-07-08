@@ -1,10 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace CodeSamples.Patterns
+namespace CodeSamples.Patterns.Behavioral
 {
     #region Strategy classes and interfaces
     interface ISortStrategy
@@ -27,6 +24,14 @@ namespace CodeSamples.Patterns
             Console.WriteLine($"Shell Sort Called...");
         }
     }
+
+    class InsertionSortStrategy : ISortStrategy
+    {
+        public void Sort(List<int> sortableList)
+        {
+            Console.WriteLine($"Insertion Sort Called...");
+        }
+    }
     #endregion
 
     class StrategyTestClass
@@ -45,7 +50,6 @@ namespace CodeSamples.Patterns
         }
     }
 
-
     public class StrategyPatternSample : SampleExecute
     {
         public override void Execute()
@@ -55,6 +59,8 @@ namespace CodeSamples.Patterns
             testClass.SetSortStrategy(new QuickSortStrategy());
             testClass.Sort();
             testClass.SetSortStrategy(new ShellSortStrategy());
+            testClass.Sort();
+            testClass.SetSortStrategy(new InsertionSortStrategy());
             testClass.Sort();
         }
     }
