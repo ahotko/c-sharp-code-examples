@@ -15,6 +15,8 @@ namespace CodeSamples.Patterns
             Section("Behavioral Patterns");
             var strategy = new StrategyPatternSample();
             strategy.Execute();
+            var observer = new ObserverPatternSample();
+            observer.Execute();
             Finish();
         }
     }

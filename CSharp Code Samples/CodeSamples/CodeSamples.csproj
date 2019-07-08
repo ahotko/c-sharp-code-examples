@@ -57,9 +57,10 @@
     <Compile Include="Attributes\DebuggingSample.cs" />
     <Compile Include="ISampleExecute.cs" />
     <Compile Include="MultiThreading\BackgroundWorkerSample.cs" />
+    <Compile Include="Patterns\Behavioral\ObserverPattern.cs" />
     <Compile Include="Patterns\PatternsSample.cs" />
-    <Compile Include="Patterns\SingletonPattern.cs" />
-    <Compile Include="Patterns\StrategyPattern.cs" />
+    <Compile Include="Patterns\Creational\SingletonPattern.cs" />
+    <Compile Include="Patterns\Behavioral\StrategyPattern.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SampleExecute.cs" />
@@ -77,9 +78,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Patterns\Behavioral\" />
-    <Folder Include="Patterns\Creational\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

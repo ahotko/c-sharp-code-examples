@@ -8,6 +8,7 @@ A collection of code samples I have used C# and think they might be useful in th
 	* [Singleton Pattern](CSharp%20Code%20Samples/CodeSamples/Patterns/SingletonPattern.cs)
   * Behavioral Patterns
 	* [Strategy Pattern](CSharp%20Code%20Samples/CodeSamples/Patterns/StrategyPattern.cs)
+	* [Observer Pattern](CSharp%20Code%20Samples/CodeSamples/Patterns/ObserverPattern.cs)
 * [Syntactic Sugars](CSharp%20Code%20Samples/CodeSamples/SyntacticSugars)
   * [Auto Property](CSharp%20Code%20Samples/CodeSamples/SyntacticSugars/PropertiesSample.cs#L34)
   * [Auto Property with default value](CSharp%20Code%20Samples/CodeSamples/SyntacticSugars/PropertiesSample.cs#L35)
