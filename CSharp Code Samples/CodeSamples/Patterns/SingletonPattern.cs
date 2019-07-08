@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeSamples.Patterns
 {
@@ -16,6 +12,15 @@ namespace CodeSamples.Patterns
         public void SomeMethod()
         {
             Console.WriteLine("Singleton method called");
+        }
+    }
+
+    public class SingletonPatternSample : SampleExecute
+    {
+        public override void Execute()
+        {
+            Section("Singleton Pattern");
+            SingletonPattern.Instance.SomeMethod();
         }
     }
 }
