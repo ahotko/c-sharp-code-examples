@@ -59,6 +59,8 @@
     <Compile Include="MultiThreading\BackgroundWorkerSample.cs" />
     <Compile Include="Patterns\Behavioral\ObserverPattern.cs" />
     <Compile Include="Patterns\Behavioral\StatePattern.cs" />
+    <Compile Include="Patterns\Creational\AbstractFactoryPattern.cs" />
+    <Compile Include="Patterns\Creational\FactoryMethodPattern.cs" />
     <Compile Include="Patterns\PatternsSample.cs" />
     <Compile Include="Patterns\Creational\SingletonPattern.cs" />
     <Compile Include="Patterns\Behavioral\StrategyPattern.cs" />

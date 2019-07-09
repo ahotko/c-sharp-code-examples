@@ -11,6 +11,10 @@ namespace CodeSamples.Patterns
             Section("Creational Patterns");
             var singleton = new SingletonPatternSample();
             singleton.Execute();
+            var factoryMethod = new FactoryMethodPatternSample();
+            factoryMethod.Execute();
+            var abstractFactory = new AbstractFactoryPatternSample();
+            abstractFactory.Execute();
             LineBreak();
             Section("Behavioral Patterns");
             var strategy = new StrategyPatternSample();

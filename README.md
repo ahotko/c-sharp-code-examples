@@ -6,6 +6,8 @@ A collection of code samples I have used C# and think they might be useful in th
 * [Design Patterns](CSharp%20Code%20Samples/CodeSamples/Patterns)
   * Creational Patterns
 	* [Singleton Pattern](CSharp%20Code%20Samples/CodeSamples/Patterns/Creational/SingletonPattern.cs)
+	* [Factory Method Pattern](CSharp%20Code%20Samples/CodeSamples/Patterns/Creational/FactoryMethodPattern.cs)
+	* [Abstract Factory Pattern](CSharp%20Code%20Samples/CodeSamples/Patterns/Creational/AbstractFactoryPattern.cs)
   * Behavioral Patterns
 	* [Strategy Pattern](CSharp%20Code%20Samples/CodeSamples/Patterns/Behavioral/StrategyPattern.cs)
 	* [Observer Pattern](CSharp%20Code%20Samples/CodeSamples/Patterns/Behavioral/ObserverPattern.cs)
