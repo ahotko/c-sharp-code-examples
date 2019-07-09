@@ -5,10 +5,11 @@ A collection of code samples I have used C# and think they might be useful in th
 ## Sample Categories
 * [Design Patterns](CSharp%20Code%20Samples/CodeSamples/Patterns)
   * Creational Patterns
-	* [Singleton Pattern](CSharp%20Code%20Samples/CodeSamples/Patterns/SingletonPattern.cs)
+	* [Singleton Pattern](CSharp%20Code%20Samples/CodeSamples/Patterns/Creational/SingletonPattern.cs)
   * Behavioral Patterns
-	* [Strategy Pattern](CSharp%20Code%20Samples/CodeSamples/Patterns/StrategyPattern.cs)
-	* [Observer Pattern](CSharp%20Code%20Samples/CodeSamples/Patterns/ObserverPattern.cs)
+	* [Strategy Pattern](CSharp%20Code%20Samples/CodeSamples/Patterns/Behavioral/StrategyPattern.cs)
+	* [Observer Pattern](CSharp%20Code%20Samples/CodeSamples/Patterns/Behavioral/ObserverPattern.cs)
+	* [State Pattern](CSharp%20Code%20Samples/CodeSamples/Patterns/Behavioral/StatePattern.cs)
 * [Syntactic Sugars](CSharp%20Code%20Samples/CodeSamples/SyntacticSugars)
   * [Auto Property](CSharp%20Code%20Samples/CodeSamples/SyntacticSugars/PropertiesSample.cs#L34)
   * [Auto Property with default value](CSharp%20Code%20Samples/CodeSamples/SyntacticSugars/PropertiesSample.cs#L35)

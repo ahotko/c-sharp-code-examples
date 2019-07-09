@@ -17,6 +17,8 @@ namespace CodeSamples.Patterns
             strategy.Execute();
             var observer = new ObserverPatternSample();
             observer.Execute();
+            var state = new StatePatternSample();
+            state.Execute();
             Finish();
         }
     }
