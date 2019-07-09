@@ -20,7 +20,7 @@ A collection of code samples I have used C# and think they might be useful in th
 * [Tuple Deconstruction](CSharp%20Code%20Samples/CodeSamples/TupleDeconstruction) (requires [`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/)); Additional links: [Link](https://docs.microsoft.com/en-us/dotnet/csharp/deconstruct)
 * [Object Pool](CSharp%20Code%20Samples/CodeSamples/UsefulClasses/ObjectPoolSample.cs)
 * [Dictionaries](CSharp%20Code%20Samples/CodeSamples/UsefulClasses/Dictionaries.cs)
-  * ["Ordinary" Dictionary](CSharp%20Code%20Samples/CodeSamples/UsefulClasses/Dictionaries.cs#L42) Additional links: [Link](https://www.dotnetperls.com/dictionary)
+  * [`Dictionary`](CSharp%20Code%20Samples/CodeSamples/UsefulClasses/Dictionaries.cs#L42) Additional links: [Link](https://www.dotnetperls.com/dictionary)
   * [`OrderedDictionary`](CSharp%20Code%20Samples/CodeSamples/UsefulClasses/Dictionaries.cs#L50) (requires [`System.Collections.Specialized`](https://www.nuget.org/packages/System.Collections.Specialized/)); Additional links: [Link](https://www.geeksforgeeks.org/c-sharp-ordereddictionary-class/)
   * [`SortedDictionary`](CSharp%20Code%20Samples/CodeSamples/UsefulClasses/Dictionaries.cs#L65) Additional links: [Link](https://www.dotnetperls.com/sorteddictionary)
 * [Abstract Class](CSharp%20Code%20Samples/CodeSamples/SampleExecute.cs)
