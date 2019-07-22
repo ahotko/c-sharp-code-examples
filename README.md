@@ -66,6 +66,8 @@ A collection of code samples I have used C# and think they might be useful in th
   * [Jil - Fast .NET JSON (De)Serializer, Built On Sigil](https://github.com/kevin-montrose/Jil)
 * Logging
   * [NLog](https://nlog-project.org/)
+* ORM
+  * [AutoMapper](https://automapper.org/)
   
 ### WPF Specific
 * UI/UX
