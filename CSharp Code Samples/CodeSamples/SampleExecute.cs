@@ -60,6 +60,23 @@ namespace CodeSamples
         }
 
         //from interface
+        //abstract methods MUST be implemented by derived class, because
+        //they do not have implementation in abstract class
         public abstract void Execute();
+
+        //virtual methods do not have to be implemented by derived class, because
+        //they have implementation in abstract class; they can be overriden in derived
+        //class, if necessary
+        public virtual void ExecuteVirtual()
+        {
+            Console.WriteLine("Executing Virtual Method in abstract class");
+        }
+
+        //methods, that are not abstract or virtual, cannot be overriden in derived
+        //class
+        public void ExecuteNormal()
+        {
+            Console.WriteLine("Executing Method in abstract class");
+        }
     }
 }
