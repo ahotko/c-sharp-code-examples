@@ -16,11 +16,10 @@ namespace CodeSamples.Patterns.Other
     interface IRepository<T> where T : IEntity
     {
         T GetById(int id);
-        IEnumerable<T> List();
-        IEnumerable<T> List(Expression<Func<T, bool>> predicate);
+        IEnumerable<T> GetAll();
+        IEnumerable<T> Find(Expression<Func<T, bool>> predicate);
         void Add(T entity);
-        void Delete(T entity);
-        void Edit(T entity);
+        void Remove(T entity);
     }
 
     //...or obstract class
@@ -48,7 +47,7 @@ namespace CodeSamples.Patterns.Other
 
         public IEnumerable<T> List(Expression<Func<T, bool>> predicate)
         {
-            return _entityRepository;
+            return _entityRepository.AsQueryable().Where<T>(predicate).OrderBy(o => o.Id);
         }
 
         public void Add(T entity)
@@ -59,11 +58,6 @@ namespace CodeSamples.Patterns.Other
         public void Delete(T entity)
         {
             _entityRepository.Remove(entity);
-        }
-
-        public void Edit(T entity)
-        {
-            //
         }
     }
 
@@ -84,14 +78,9 @@ namespace CodeSamples.Patterns.Other
             //_entityRepository.SaveChanges();
         }
 
-        public void Delete(Entity entity)
+        public void Remove(Entity entity)
         {
             _entityRepository.Remove(entity);
-        }
-
-        public void Edit(Entity entity)
-        {
-            throw new NotImplementedException();
         }
 
         public Entity GetById(int id)
@@ -100,23 +89,25 @@ namespace CodeSamples.Patterns.Other
             return result;
         }
 
-        public IEnumerable<Entity> List()
+        public IEnumerable<Entity> GetAll()
         {
             return _entityRepository;
         }
 
-        public IEnumerable<Entity> List(Expression<Func<Entity, bool>> predicate)
+        public IEnumerable<Entity> Find(Expression<Func<Entity, bool>> predicate)
         {
-            return _entityRepository;
+            return _entityRepository.AsQueryable().Where(predicate).OrderBy(o => o.Id);
         }
     }
     #endregion
 
-    public class RepositoryPattern : SampleExecute
+    public class SingletonPatternSample : SampleExecute
     {
         public override void Execute()
         {
-            throw new NotImplementedException();
+            var repository = new EntityRepository();
+            repository.Add(new Entity() { Id = 1 });
+            var result = repository.Find(o => o.Id > 10);
         }
     }
 }
