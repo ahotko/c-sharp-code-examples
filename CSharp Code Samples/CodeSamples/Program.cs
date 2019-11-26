@@ -39,52 +39,67 @@ namespace CodeSamples
             var props = new PropertiesSample();
             props.Execute();
 
-            var usings = new UsingSample();
-            usings.Execute();
+            var Sample = new UsingSample();
+            Sample.Execute();
 
-            var interpol = new StringInterpolationSample();
-            interpol.Execute();
+            var stringInterpolation = new StringInterpolationSample();
+            stringInterpolation.Execute();
 
-            var patterns = new PatternMatchingSample();
-            patterns.Execute();
+            var patternMatchingSample = new PatternMatchingSample();
+            patternMatchingSample.Execute();
+
+            var nullSample = new NullSample();
+            nullSample.Execute();
             #endregion
 
             #region Useful
-            var useful = new ClassAndMethodNamesSample();
-            useful.Execute();
+            var classAndMethodNamesSample = new ClassAndMethodNamesSample();
+            classAndMethodNamesSample.Execute();
+
+            var callerInfo = new CallerInfoSample();
+            callerInfo.Execute();
             #endregion
 
             #region Patterns
-            var patts = new PatternsSample();
-            patts.Execute();
+            var patternsSample = new PatternsSample();
+            patternsSample.Execute();
             #endregion
 
             #region LINQ
-            var linqs = new LinqSample();
-            linqs.Execute();
+            var linqSample = new LinqSample();
+            linqSample.Execute();
             #endregion
 
             #region Operators
-            var opera = new OperatorOverloadingSample();
-            opera.Execute();
+            var operatorOverloadingSample = new OperatorOverloadingSample();
+            operatorOverloadingSample.Execute();
             #endregion
 
             #region Entity Conversion
-            var entityConv = new EntityConversionSample();
-            entityConv.Execute();
+            var entityConversionSample = new EntityConversionSample();
+            entityConversionSample.Execute();
             #endregion
 
             #region Classes
-            var consChain = new ConstructorChainingSample();
-            consChain.Execute();
+            var constructorChainingSample = new ConstructorChainingSample();
+            constructorChainingSample.Execute();
+
+            var anonymousTypesSample = new AnonymousTypesSample();
+            anonymousTypesSample.Execute();
+
+            var extensionMethodsSample = new ExtensionMethodsSample();
+            extensionMethodsSample.Execute();
             #endregion
 
             #region Attributes
             var debuggerAttributeSample = new DebuggingSample();
             debuggerAttributeSample.Execute();
 
-            var oboleteAttributeSample = new ObsoleteSample();
-            oboleteAttributeSample.Execute();
+            var obsoleteAttributeSample = new ObsoleteSample();
+            obsoleteAttributeSample.Execute();
+
+            var conditionalAttributeSample = new ConditionalSample();
+            conditionalAttributeSample.Execute();
             #endregion
 
             #region Threading

@@ -19,19 +19,24 @@ namespace CodeSamples.Attributes
         public string LastName { get; set; }
     }
 
+    /// <summary>
+    /// <para>
+    /// DebuggerBrowsableState.Collapsed - This signifies that the default behaviour should be used for the decorated member and 
+    ///      gives the equivalent results as when the attribute is omitted. When viewed in a debugging tool the member is visible 
+    ///      and can be expanded to allow access to any further members that it contains.
+    /// </para>
+    /// <para>
+    /// DebuggerBrowsableState.Never - This indicates that the member should not be displayed in debugging windows. The member is 
+    ///      hidden from view completely.
+    /// </para>
+    /// <para>
+    /// DebuggerBrowsableState.RootHidden - This signifies that the member should not be visible but that its own members should be. 
+    ///      The members of the hidden item appear as if they were one level higher in the hierarchy of values. This setting is useful 
+    ///      for members that are used only to store structured information, such as collection types or some data objects.
+    /// </para>
+    /// </summary>
     sealed class DebuggerExamplesDebuggerBrowsable
     {
-        /// <summary>
-        /// DebuggerBrowsableState.Collapsed - This signifies that the default behaviour should be used for the decorated member and 
-        ///      gives the equivalent results as when the attribute is omitted. When viewed in a debugging tool the member is visible 
-        ///      and can be expanded to allow access to any further members that it contains.
-        /// DebuggerBrowsableState.Never - This indicates that the member should not be displayed in debugging windows. The member is 
-        ///      hidden from view completely.
-        /// DebuggerBrowsableState.RootHidden - This signifies that the member should not be visible but that its own members should be. 
-        ///      The members of the hidden item appear as if they were one level higher in the hierarchy of values. This setting is useful 
-        ///      for members that are used only to store structured information, such as collection types or some data objects.
-        /// </summary>
-
         [DebuggerBrowsable(DebuggerBrowsableState.Collapsed)]
         public string StandardProperty { get; set; }
 
@@ -51,22 +56,28 @@ namespace CodeSamples.Attributes
             return 5*2;
         }
 
+        /// <summary>
+        /// Also see <see cref="ConditionalSample"/> class
+        /// </summary>
         [Conditional("DEBUG")]
         public void ExecuteOnlyInDebugMode()
         {
-            Console.WriteLine($"Executed in DEBUG mode");
+            Console.WriteLine("Executed in DEBUG mode");
         }
 
+        /// <summary>
+        /// Also see <see cref="ConditionalSample"/> class
+        /// </summary>
         [Conditional("RELEASE")]
         public void ExecuteOnlyInReleaseMode()
         {
-            Console.WriteLine($"Executed in RELEASE mode");
+            Console.WriteLine("Executed in RELEASE mode");
         }
 
 #if DEBUG
         public void CompileOnlyWhenDebugDefined()
         {
-            Console.WriteLine($"Compiled and Executed in DEBUG mode");
+            Console.WriteLine("Compiled and Executed in DEBUG mode");
         }
 #endif
 
