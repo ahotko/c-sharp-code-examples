@@ -59,6 +59,7 @@
     <Compile Include="Classes\ConstructorChainingSample.cs" />
     <Compile Include="Attributes\DebuggingSample.cs" />
     <Compile Include="Classes\ExtensionMethodsSample.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="ISampleExecute.cs" />
     <Compile Include="MultiThreading\BackgroundWorkerSample.cs" />
     <Compile Include="Patterns\Behavioral\ObserverPattern.cs" />

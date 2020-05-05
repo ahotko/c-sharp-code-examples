@@ -26,7 +26,7 @@ namespace CodeSamples.Useful
     {
         List<LinqSampleClass> _sampleList = new List<LinqSampleClass>();
 
-        private void PrepareList()
+        private void PrepareList(int sampleCount)
         {
             #region Source Collections
             var names = new Collection<string>()     { "Sasha", "Ria", "Kaseem", "Eve", "Keegan", "Giacomo", "Alana", "Katelyn",
@@ -48,6 +48,10 @@ namespace CodeSamples.Useful
             var places = new Collection<string>()    { "Rio Verde", "Sherborne", "Bolano", "Waver", "Sclayn" };
             #endregion
 
+            int maxAvailableSamples = names.Count * lastNames.Count * places.Count;
+            if (sampleCount > maxAvailableSamples)
+                throw new ArgumentOutOfRangeException("sampleCount", $"Requested sample count ({sampleCount}) too big. Max available count is {maxAvailableSamples}");
+
             #region Long list of names
             _sampleList = new List<LinqSampleClass>();
             int count = 0;
@@ -68,13 +72,13 @@ namespace CodeSamples.Useful
                     _sampleList.Add(sample);
                     count++;
                 }
-            } while (count < Constants.Linq.MaxSamples);
+            } while (count < sampleCount);
             #endregion
         }
 
         public LinqSample()
         {
-            PrepareList();
+            PrepareList(Constants.Linq.MaxSamples);
         }
 
         private void SumAgeSimple()
