@@ -36,6 +36,7 @@ A collection of code samples I have used C# and think they might be useful in th
 * [Extension Methods](CSharp%20Code%20Samples/CodeSamples/Classes/ExtensionMethodsSample.cs)
 * [Implicit/Explicit Conversion operators](CSharp%20Code%20Samples/CodeSamples/Alterations/EntityConversionSample.cs)
 * [Interface](CSharp%20Code%20Samples/CodeSamples/ISampleExecute.cs)
+  * [`IEquatable<T>`](CSharp%20Code%20Samples/CodeSamples/Useful/LinqSample.cs) Additional links: [Link](https://bettersolutions.com/csharp/interfaces/iequatable.htm)
 * [`LINQ`](CSharp%20Code%20Samples/CodeSamples/Useful/LinqSample.cs)
   * Sum
   * Sum by Groups

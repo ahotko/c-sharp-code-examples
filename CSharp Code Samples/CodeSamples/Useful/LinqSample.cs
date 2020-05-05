@@ -6,12 +6,19 @@ using System.Linq;
 namespace CodeSamples.Useful
 {
     #region Sample Class
-    public class LinqSampleClass
+    public sealed class LinqSampleClass : IEquatable<LinqSampleClass>
     {
         public string Name { get; set; } = String.Empty;
         public string LastName { get; set; } = String.Empty;
         public string Place { get; set; } = String.Empty;
         public int Age { get; set; } = 0;
+
+        public bool Equals(LinqSampleClass other)
+        {
+            //compare only by name, lastname and place, disregard age
+            if (other is null) return false;
+            return (other.Name.Equals(Name) && other.LastName.Equals(LastName) && other.Place.Equals(Place));
+        }
     }
     #endregion
 
@@ -43,15 +50,25 @@ namespace CodeSamples.Useful
 
             #region Long list of names
             _sampleList = new List<LinqSampleClass>();
+            int count = 0;
             var random = new Random();
 
-            for (int n = 0; n < 200; n++)
+            do
             {
-                _sampleList.Add(new LinqSampleClass() { Name = names[random.Next(names.Count)],
-                                                        LastName = lastNames[random.Next(lastNames.Count)],
-                                                        Place = places[random.Next(places.Count)],
-                                                        Age = random.Next(1, 50) });
-            }
+                var sample = new LinqSampleClass()
+                                    {
+                                        Name = names[random.Next(names.Count)],
+                                        LastName = lastNames[random.Next(lastNames.Count)],
+                                        Place = places[random.Next(places.Count)],
+                                        Age = random.Next(Constants.Linq.MinAge, Constants.Linq.MaxAge)
+                                    };
+                //ensure only different persons by name, lastname and place
+                if (!_sampleList.Contains(sample))
+                {
+                    _sampleList.Add(sample);
+                    count++;
+                }
+            } while (count < Constants.Linq.MaxSamples);
             #endregion
         }
 
