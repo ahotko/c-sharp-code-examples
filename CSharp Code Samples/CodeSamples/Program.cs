@@ -1,6 +1,7 @@
 ﻿using CodeSamples.Alterations;
 using CodeSamples.Attributes;
 using CodeSamples.Classes;
+using CodeSamples.Comparing;
 using CodeSamples.MultiThreading;
 using CodeSamples.Patterns;
 using CodeSamples.SyntacticSugars;
@@ -105,6 +106,11 @@ namespace CodeSamples
             #region Threading
             var backgroundWorkerSample = new BackgroundWorkerSample();
             backgroundWorkerSample.Execute();
+            #endregion
+
+            #region Equality
+            var compareSample = new CompareSample();
+            compareSample.Execute();
             #endregion
 
             Console.WriteLine();

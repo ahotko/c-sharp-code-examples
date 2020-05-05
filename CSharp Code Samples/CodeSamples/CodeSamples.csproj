@@ -59,6 +59,9 @@
     <Compile Include="Classes\ConstructorChainingSample.cs" />
     <Compile Include="Attributes\DebuggingSample.cs" />
     <Compile Include="Classes\ExtensionMethodsSample.cs" />
+    <Compile Include="Comparing\CompareSample.cs" />
+    <Compile Include="Comparing\EqualityComparer.cs" />
+    <Compile Include="Comparing\Equatable.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="ISampleExecute.cs" />
     <Compile Include="MultiThreading\BackgroundWorkerSample.cs" />
