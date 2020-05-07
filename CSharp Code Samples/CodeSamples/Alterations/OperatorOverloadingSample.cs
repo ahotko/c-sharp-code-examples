@@ -3,36 +3,58 @@
 namespace CodeSamples.Alterations
 {
     #region Calculation Class
+    /// <summary>
+    /// List of overloadable operators: https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading
+    /// </summary>
     public class CalculationClass
     {
         public int A { get; set; }
 
+        #region Constructors
+        public CalculationClass() : this(0) { }
+
+        public CalculationClass(int initialValue)
+        {
+            A = initialValue;
+        }
+        #endregion
+
+        #region Addition (Operator +)
+        public static CalculationClass operator +(CalculationClass value) => value;
+
         public static CalculationClass operator +(CalculationClass firstValue, CalculationClass secondValue)
         {
-            var result = new CalculationClass();
-            result.A = firstValue.A + secondValue.A;
-            return result;
+            return new CalculationClass(firstValue.A + secondValue.A);
         }
+
+        public static CalculationClass operator +(CalculationClass firstValue, int secondValue)
+        {
+            return firstValue + new CalculationClass(secondValue);
+        }
+
+        public static CalculationClass operator +(int firstValue, CalculationClass secondValue)
+        {
+            return secondValue + new CalculationClass(firstValue);
+        }
+        #endregion
+
+        #region Subtraction (Operator -)
+        public static CalculationClass operator -(CalculationClass value) => new CalculationClass(-value.A);
 
         public static CalculationClass operator -(CalculationClass firstValue, CalculationClass secondValue)
         {
-            var result = new CalculationClass();
-            result.A = firstValue.A - secondValue.A;
-            return result;
+            return new CalculationClass(firstValue.A - secondValue.A);
         }
+        #endregion
 
         public static CalculationClass operator *(CalculationClass firstValue, CalculationClass secondValue)
         {
-            var result = new CalculationClass();
-            result.A = firstValue.A * secondValue.A;
-            return result;
+            return new CalculationClass(firstValue.A * secondValue.A);
         }
 
         public static CalculationClass operator /(CalculationClass firstValue, CalculationClass secondValue)
         {
-            var result = new CalculationClass();
-            result.A = firstValue.A / secondValue.A;
-            return result;
+            return new CalculationClass(firstValue.A / secondValue.A);
         }
 
         public static bool operator true(CalculationClass value)
@@ -45,6 +67,7 @@ namespace CodeSamples.Alterations
             return value.A == 0;
         }
 
+        #region Equality
         public static Boolean operator ==(CalculationClass firstValue, CalculationClass secondValue)
         {
             return (firstValue.A == secondValue.A);
@@ -54,6 +77,59 @@ namespace CodeSamples.Alterations
         {
             return (firstValue.A != secondValue.A);
         }
+        #endregion
+
+        #region Comparing
+
+        #region Operator >
+        public static Boolean operator >(CalculationClass firstValue, CalculationClass secondValue)
+        {
+            return (firstValue.A > secondValue.A);
+        }
+
+        public static Boolean operator >(CalculationClass firstValue, int secondValue)
+        {
+            return (firstValue.A > secondValue);
+        }
+
+        public static Boolean operator >(int firstValue, CalculationClass secondValue)
+        {
+            return (firstValue > secondValue.A);
+        }
+        #endregion
+
+        #region Operator <
+        public static Boolean operator <(CalculationClass firstValue, CalculationClass secondValue)
+        {
+            return (firstValue.A < secondValue.A);
+        }
+
+        public static Boolean operator <(CalculationClass firstValue, int secondValue)
+        {
+            return (firstValue.A < secondValue);
+        }
+
+        public static Boolean operator <(int firstValue, CalculationClass secondValue)
+        {
+            return (firstValue < secondValue.A);
+        }
+        #endregion
+
+        #region Operator >=
+        public static Boolean operator >=(CalculationClass firstValue, CalculationClass secondValue)
+        {
+            return (firstValue.A >= secondValue.A);
+        }
+        #endregion
+
+        #region Operator <=
+        public static Boolean operator <=(CalculationClass firstValue, CalculationClass secondValue)
+        {
+            return (firstValue.A <= secondValue.A);
+        }
+        #endregion
+
+        #endregion
 
         public override bool Equals(object obj)
         {

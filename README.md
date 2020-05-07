@@ -20,6 +20,9 @@ A collection of code samples I have used C# and think they might be useful in th
   * [Get current Method Name](CSharp%20Code%20Samples/CodeSamples/Classes/ClassAndMethodNamesSample.cs#L10)
   * [Constructor Chaining](CSharp%20Code%20Samples/CodeSamples/Classes/ConstructorChainingSample.cs)
   * [Caller Info](CSharp%20Code%20Samples/CodeSamples/Classes/CallerInfoSample.cs)
+* [Comparing](CSharp%20Code%20Samples/CodeSamples/Classes)
+  * [`IEquatable<T>`](CSharp%20Code%20Samples/CodeSamples/Comparing/Equatable.cs) Additional links: [Link](https://bettersolutions.com/csharp/interfaces/iequatable.htm)
+  * [`IEqualityComparer<T>`](CSharp%20Code%20Samples/CodeSamples/Comparing/EqualityComparer.cs) Additional links: [Link](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.iequalitycomparer-1)
 * [Design Patterns](CSharp%20Code%20Samples/CodeSamples/Patterns)
   * Creational Patterns
 	* [Singleton Pattern](CSharp%20Code%20Samples/CodeSamples/Patterns/Creational/SingletonPattern.cs)
@@ -36,15 +39,15 @@ A collection of code samples I have used C# and think they might be useful in th
 * [Extension Methods](CSharp%20Code%20Samples/CodeSamples/Classes/ExtensionMethodsSample.cs)
 * [Implicit/Explicit Conversion operators](CSharp%20Code%20Samples/CodeSamples/Alterations/EntityConversionSample.cs)
 * [Interface](CSharp%20Code%20Samples/CodeSamples/ISampleExecute.cs)
-  * [`IEquatable<T>`](CSharp%20Code%20Samples/CodeSamples/Useful/LinqSample.cs) Additional links: [Link](https://bettersolutions.com/csharp/interfaces/iequatable.htm)
 * [`LINQ`](CSharp%20Code%20Samples/CodeSamples/Useful/LinqSample.cs)
   * Sum
   * Sum by Groups
   * Ordering (asc, desc)
   * Skipping
   * Take N elements
+  * Select Samples with value between 
 * [Object Pool](CSharp%20Code%20Samples/CodeSamples/UsefulClasses/ObjectPoolSample.cs)
-* [Operator Overloading](CSharp%20Code%20Samples/CodeSamples/Alterations/OperatorOverloadingSample.cs)
+* [Operator Overloading](CSharp%20Code%20Samples/CodeSamples/Alterations/OperatorOverloadingSample.cs) Additional links: [Link](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading)
 * [Syntactic Sugars](CSharp%20Code%20Samples/CodeSamples/SyntacticSugars)
   * [Auto Property](CSharp%20Code%20Samples/CodeSamples/SyntacticSugars/PropertiesSample.cs#L34)
   * [Auto Property with default value](CSharp%20Code%20Samples/CodeSamples/SyntacticSugars/PropertiesSample.cs#L35)
