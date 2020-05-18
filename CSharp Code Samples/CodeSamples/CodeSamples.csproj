@@ -77,6 +77,10 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SampleExecute.cs" />
+    <Compile Include="SOLID\S01-SingleResponsibilityPrinciple_SRP\GarageStation.cs" />
+    <Compile Include="SOLID\S01-SingleResponsibilityPrinciple_SRP\GarageUtility.cs" />
+    <Compile Include="SOLID\S01-SingleResponsibilityPrinciple_SRP\IGarageUtility.cs" />
+    <Compile Include="SOLID\S01-SingleResponsibilityPrinciple_SRP\SingleResponsibilityPrincipleSample.cs" />
     <Compile Include="SOLID\S04-InversionOfControl_IoC\Duck.cs" />
     <Compile Include="SOLID\S04-InversionOfControl_IoC\Flys.cs" />
     <Compile Include="SOLID\S04-InversionOfControl_IoC\IDuckFly.cs" />

@@ -4,6 +4,7 @@ using CodeSamples.Classes;
 using CodeSamples.Comparing;
 using CodeSamples.MultiThreading;
 using CodeSamples.Patterns;
+using CodeSamples.SOLID.S01_SingleResponsibilityPrinciple_SRP;
 using CodeSamples.SOLID.S04_InversionOfControl_IoC;
 using CodeSamples.SyntacticSugars;
 using CodeSamples.TupleDeconstruction;
@@ -116,6 +117,9 @@ namespace CodeSamples
             #endregion
 
             #region SOLID
+            var solidSrp = new SingleResponsibilityPrincipleSample();
+            solidSrp.Execute();
+
             var solidIoC = new InversionOfControlSample();
             solidIoC.Execute();
             #endregion
