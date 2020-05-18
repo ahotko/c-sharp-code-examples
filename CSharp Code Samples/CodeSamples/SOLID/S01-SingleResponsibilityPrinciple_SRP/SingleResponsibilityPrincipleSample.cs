@@ -11,6 +11,8 @@
             garage.OpenForService();
             garage.ServiceAVehicle();
             garage.CloseGarage();
+
+            Finish();
         }
     }
 }

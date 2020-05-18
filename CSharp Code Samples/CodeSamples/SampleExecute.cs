@@ -33,6 +33,7 @@ namespace CodeSamples
         {
             PushColors();
             SetTitleColor();
+            Console.WriteLine();
             Console.WriteLine(title);
             PopColors();
             Console.WriteLine("============================================================");

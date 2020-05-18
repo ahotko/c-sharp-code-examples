@@ -92,6 +92,8 @@
     <Compile Include="SyntacticSugars\PropertiesSample.cs" />
     <Compile Include="SyntacticSugars\StringInterpolationSample.cs" />
     <Compile Include="SyntacticSugars\UsingSample.cs" />
+    <Compile Include="Timing\TimingSample.cs" />
+    <Compile Include="Timing\TimingStopwatch.cs" />
     <Compile Include="TupleDeconstruction\TupleDeconstruction.cs" />
     <Compile Include="UsefulClasses\Dictionaries.cs" />
     <Compile Include="UsefulClasses\ObjectPoolSample.cs" />

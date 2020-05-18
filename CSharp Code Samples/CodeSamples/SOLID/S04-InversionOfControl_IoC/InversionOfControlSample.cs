@@ -14,6 +14,8 @@
             var weirdDuck = new Duck(new SpanishQuack(), new NormalFly());
             weirdDuck.Quack();
             weirdDuck.Fly();
+
+            Finish();
         }
     }
 }

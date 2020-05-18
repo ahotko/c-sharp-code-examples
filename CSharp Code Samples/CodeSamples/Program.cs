@@ -7,6 +7,7 @@ using CodeSamples.Patterns;
 using CodeSamples.SOLID.S01_SingleResponsibilityPrinciple_SRP;
 using CodeSamples.SOLID.S04_InversionOfControl_IoC;
 using CodeSamples.SyntacticSugars;
+using CodeSamples.Timing;
 using CodeSamples.TupleDeconstruction;
 using CodeSamples.Useful;
 using CodeSamples.UsefulClasses;
@@ -122,6 +123,11 @@ namespace CodeSamples
 
             var solidIoC = new InversionOfControlSample();
             solidIoC.Execute();
+            #endregion
+
+            #region Timing
+            var timingSample = new TimingSample();
+            timingSample.Execute();
             #endregion
 
             Console.WriteLine();
