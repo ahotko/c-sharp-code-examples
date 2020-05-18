@@ -37,7 +37,7 @@ namespace CodeSamples.Patterns.Behavioral
     class StrategyTestClass
     {
         private ISortStrategy _sortStrategy = null;
-        private List<int> _sortableList = new List<int>() { 5, 3, 7, 12, 100, 1 };
+        private readonly List<int> _sortableList = new List<int>() { 5, 3, 7, 12, 100, 1 };
 
         public void SetSortStrategy(ISortStrategy sortStrategy)
         {

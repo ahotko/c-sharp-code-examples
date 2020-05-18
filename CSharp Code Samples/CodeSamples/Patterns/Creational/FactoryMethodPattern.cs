@@ -13,8 +13,6 @@ namespace CodeSamples.Patterns.Creational
 
     abstract class Sandwich
     {
-        private readonly List<VeganStuff> _ingredients = new List<VeganStuff>();
-
         public Sandwich()
         {
             MakeSandwich();
@@ -23,11 +21,11 @@ namespace CodeSamples.Patterns.Creational
         //Factory Method
         public abstract void MakeSandwich();
 
-        public List<VeganStuff> Ingredients => _ingredients;
+        public List<VeganStuff> Ingredients { get; } = new List<VeganStuff>();
 
         public void ListIngredients()
         {
-            foreach(var ingredient in _ingredients)
+            foreach(var ingredient in Ingredients)
             {
                 Console.WriteLine($"  ingredient = {ingredient.GetType().Name}");
             }

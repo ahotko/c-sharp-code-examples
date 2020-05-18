@@ -4,6 +4,7 @@ using CodeSamples.Classes;
 using CodeSamples.Comparing;
 using CodeSamples.MultiThreading;
 using CodeSamples.Patterns;
+using CodeSamples.SOLID.S04_InversionOfControl_IoC;
 using CodeSamples.SyntacticSugars;
 using CodeSamples.TupleDeconstruction;
 using CodeSamples.Useful;
@@ -17,6 +18,7 @@ namespace CodeSamples
         static void Main(string[] args)
         {
             Console.Title = "C# Code Samples";
+            Console.OutputEncoding = System.Text.Encoding.UTF8;
 
             Console.WriteLine("Start Code Samples");
             Console.WriteLine();
@@ -111,6 +113,11 @@ namespace CodeSamples
             #region Equality
             var compareSample = new CompareSample();
             compareSample.Execute();
+            #endregion
+
+            #region SOLID
+            var solidIoC = new InversionOfControlSample();
+            solidIoC.Execute();
             #endregion
 
             Console.WriteLine();
