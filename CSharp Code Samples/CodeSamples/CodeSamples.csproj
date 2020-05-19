@@ -50,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alterations\ClassExtensions.cs" />
+    <Compile Include="Alterations\ClassExtensionSample.cs" />
     <Compile Include="Alterations\EntityConversionSample.cs" />
     <Compile Include="Alterations\OperatorOverloadingSample.cs" />
     <Compile Include="Attributes\ConditionalSample.cs" />

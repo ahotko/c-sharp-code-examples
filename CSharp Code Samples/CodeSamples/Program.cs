@@ -135,6 +135,11 @@ namespace CodeSamples
             gcSample.Execute();
             #endregion
 
+            #region Class Extensions
+            var classExtensionSample = new ClassExtensionSample();
+            classExtensionSample.Execute();
+            #endregion
+
             Console.WriteLine();
             Console.WriteLine("End Code Samples");
 

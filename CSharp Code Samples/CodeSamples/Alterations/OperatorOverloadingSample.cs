@@ -159,6 +159,7 @@ namespace CodeSamples.Alterations
         public override void Execute()
         {
             Title("OperatorOverloadingSampleExecute");
+
             CalculationClass A = new CalculationClass() { A = 100 };
             CalculationClass B = new CalculationClass() { A = 3 };
             CalculationClass C = new CalculationClass() { A = 0 };
