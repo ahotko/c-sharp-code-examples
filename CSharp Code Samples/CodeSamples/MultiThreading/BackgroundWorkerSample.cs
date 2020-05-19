@@ -4,15 +4,12 @@ using System.Threading;
 
 namespace CodeSamples.MultiThreading
 {
-    public class BackgroundWorkerSample : SampleExecute
+    public class BackgroundWorkerSample
     {
         private readonly AutoResetEvent resetEvent = new AutoResetEvent(false);
 
-        public override void Execute()
+        public void Go()
         {
-            Title("BackgroundWorkerSampleExecute");
-            Section("BackgroundWorker is...");
-
             BackgroundWorker backgroundWorker = new BackgroundWorker();
             backgroundWorker.DoWork += new DoWorkEventHandler(BackgroundWorker_DoWork);
             backgroundWorker.RunWorkerCompleted += new RunWorkerCompletedEventHandler(BackgroundWorker_RunWorkerCompleted);
@@ -26,7 +23,6 @@ namespace CodeSamples.MultiThreading
             }
             //wait for background worker to finish; not necessary, but required for testing samples, so they execute in order
             resetEvent.WaitOne();
-            Finish();
         }
 
         private void BackgroundWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)

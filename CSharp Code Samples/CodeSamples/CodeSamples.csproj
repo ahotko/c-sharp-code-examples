@@ -65,6 +65,8 @@
     <Compile Include="Constants.cs" />
     <Compile Include="ISampleExecute.cs" />
     <Compile Include="MultiThreading\BackgroundWorkerSample.cs" />
+    <Compile Include="MultiThreading\MultithreadingSample.cs" />
+    <Compile Include="MultiThreading\ThreadSample.cs" />
     <Compile Include="Patterns\Behavioral\ObserverPattern.cs" />
     <Compile Include="Patterns\Behavioral\StatePattern.cs" />
     <Compile Include="Patterns\Creational\AbstractFactoryPattern.cs" />
@@ -97,6 +99,7 @@
     <Compile Include="TupleDeconstruction\TupleDeconstruction.cs" />
     <Compile Include="UsefulClasses\Dictionaries.cs" />
     <Compile Include="UsefulClasses\ObjectPoolSample.cs" />
+    <Compile Include="Useful\GarbageCollectionSample.cs" />
     <Compile Include="Useful\LinqSample.cs" />
     <Compile Include="Classes\ClassAndMethodNamesSample.cs" />
   </ItemGroup>

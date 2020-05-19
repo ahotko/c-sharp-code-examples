@@ -108,8 +108,8 @@ namespace CodeSamples
             #endregion
 
             #region Threading
-            var backgroundWorkerSample = new BackgroundWorkerSample();
-            backgroundWorkerSample.Execute();
+            var multithreadingSample = new MultithreadingSample();
+            multithreadingSample.Execute();
             #endregion
 
             #region Equality
@@ -128,6 +128,11 @@ namespace CodeSamples
             #region Timing
             var timingSample = new TimingSample();
             timingSample.Execute();
+            #endregion
+
+            #region Garbage Collection
+            var gcSample = new GarbageCollectionSample();
+            gcSample.Execute();
             #endregion
 
             Console.WriteLine();
