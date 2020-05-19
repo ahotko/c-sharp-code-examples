@@ -35,12 +35,16 @@ namespace CodeSamples.MultiThreading
         public void Go()
         {
             var threadLabor = new ThreadLabor();
-            var laborInstructions = new LaborInstructions(syncObject);
-            laborInstructions.SomeParameter = $"Current DateTime is {DateTime.Now.ToString()}";
+            var laborInstructions = new LaborInstructions(syncObject)
+            {
+                SomeParameter = $"Current DateTime is {DateTime.Now.ToString()}"
+            };
 
             Console.WriteLine("Going into thread...");
-            var thread = new Thread(threadLabor.DoWork);
-            thread.Priority = ThreadPriority.Highest;
+            var thread = new Thread(threadLabor.DoWork)
+            {
+                Priority = ThreadPriority.Highest
+            };
             thread.Start(laborInstructions);
             syncObject.WaitOne();
             Console.WriteLine("done!");

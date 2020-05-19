@@ -42,8 +42,79 @@ using System.Threading;
 
 namespace CodeSamples.Useful
 {
-    public class GarbageCollectionSample : SampleExecute
+    internal class GarbageCollectionInfo
     {
+        public int MaxGeneration { get; private set; }
+
+        public int Generation0 { get; private set; }
+        public int Generation1 { get; private set; }
+        public int Generation2 { get; private set; }
+
+        public long TotalMemory { get; private set; }
+
+        public GarbageCollectionInfo()
+        {
+            MaxGeneration = GC.MaxGeneration;
+
+            Generation0 = GC.CollectionCount(0);
+            Generation1 = GC.CollectionCount(1);
+            Generation2 = GC.CollectionCount(2);
+
+            TotalMemory = GC.GetTotalMemory(false);
+        }
+
+        public override string ToString()
+        {
+            return $"GC Info: MaxGen={MaxGeneration}, Gen0={Generation0}, Gen1={Generation1}, Gen2={Generation2}, Total Memory={TotalMemory}";
+        }
+    }
+
+    internal class GarbageCollection
+    {
+#pragma warning disable S1481
+        private void MakeSomeGarbage()
+        {
+            Console.WriteLine("Making Garbage...");
+            for (int i = 0; i < 5000; i++)
+            {
+                var version = new Version();
+            }
+        }
+#pragma warning restore S1481
+
+#pragma warning disable S1215
+        private void ForceGarbageCollection()
+        {
+            var gc = new GarbageCollection();
+
+            var gcBefore = new GarbageCollectionInfo();
+            Console.WriteLine($"Before Garbage Collection: {gcBefore}");
+            gc.MakeSomeGarbage();
+            var gcAfterGeneratingGarbage = new GarbageCollectionInfo();
+            Console.WriteLine($"After Generating Garbage: {gcAfterGeneratingGarbage}");
+
+            GC.Collect(0);
+            var gcAfterCleanupGen0 = new GarbageCollectionInfo();
+            Console.WriteLine($"After Garbage Collection of Gen0: {gcAfterCleanupGen0}");
+
+            GC.Collect(1);
+            var gcAfterCleanupGen1 = new GarbageCollectionInfo();
+            Console.WriteLine($"After Garbage Collection of Gen1: {gcAfterCleanupGen1}");
+
+            GC.WaitForPendingFinalizers();
+            GC.Collect(2);
+
+            var gcAfterCleanupGen2 = new GarbageCollectionInfo();
+            Console.WriteLine($"After Garbage Collection of Gen2: {gcAfterCleanupGen2}");
+
+            GC.WaitForPendingFinalizers();
+            GC.Collect();
+
+            var gcAfterCleanup = new GarbageCollectionInfo();
+            Console.WriteLine($"After Garbage Collection: {gcAfterCleanup}");
+        }
+#pragma warning restore S1215
+
         private void TurnGarbageCollectionOff()
         {
             Console.Write("Turning Garbage Collection into low latency (= off)...");
@@ -58,12 +129,24 @@ namespace CodeSamples.Useful
             Console.WriteLine("done!");
         }
 
-        public override void Execute()
+        public void Go()
         {
-            Title("GarbageCollectionSample");
             TurnGarbageCollectionOff();
             Thread.Sleep(1000);
             TurnGarbageCollectionOn();
+
+            ForceGarbageCollection();
+        }
+    }
+
+    public class GarbageCollectionSample : SampleExecute
+    {
+        public override void Execute()
+        {
+            Title("GarbageCollectionSample");
+
+            var garbageCollection = new GarbageCollection();
+            garbageCollection.Go();
 
             Finish();
         }

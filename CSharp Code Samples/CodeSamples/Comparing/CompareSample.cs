@@ -41,7 +41,7 @@ namespace CodeSamples.Comparing
                 list.Add(item, item.StringProperty);
                 Console.WriteLine($"Added Sample {item.ToString()}");
             }
-            catch (ArgumentException e)
+            catch (ArgumentException)
             {
                 Console.WriteLine($"Sample '{item.ToString()}' already in list; not added");
             }

@@ -15,7 +15,7 @@ using System;
 
 namespace CodeSamples
 {
-    class Program
+    static class Program
     {
         static void Main(string[] args)
         {
