@@ -1,4 +1,6 @@
-﻿namespace CodeSamples.ConditionalDefines
+﻿using System;
+
+namespace CodeSamples.ConditionalDefines
 {
     public class ConditionalDefinesSample : SampleExecute
     {
@@ -45,6 +47,8 @@
             Console.WriteLine("NET472");
 #elif NET48
             Console.WriteLine("NET48");
+#else
+            Console.WriteLine(".NET Framework not defined.");
 #endif
 
             Section(".NET Standard");
@@ -69,6 +73,8 @@
             Console.WriteLine("NETSTANDARD2_0");
 #elif NETSTANDARD2_1
             Console.WriteLine("NETSTANDARD2_1");
+#else
+            Console.WriteLine(".NET Standard not defined.");
 #endif
 
             Section(".NET Core");
@@ -89,6 +95,8 @@
             Console.WriteLine("NETCOREAPP3_0");
 #elif NETCOREAPP3_1
             Console.WriteLine("NETCOREAPP3_1");
+#else
+            Console.WriteLine(".NET Core not defined.");
 #endif
 
             Finish();
