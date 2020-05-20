@@ -50,8 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alterations\ClassExtensions.cs" />
-    <Compile Include="Alterations\ClassExtensionSample.cs" />
+    <Compile Include="Alterations\Extensions\ClassExtensions.cs" />
+    <Compile Include="Alterations\Extensions\ClassExtensionSample.cs" />
     <Compile Include="Alterations\EntityConversionSample.cs" />
     <Compile Include="Alterations\OperatorOverloadingSample.cs" />
     <Compile Include="Attributes\ConditionalSample.cs" />
@@ -60,7 +60,6 @@
     <Compile Include="Classes\CallerInfoSample.cs" />
     <Compile Include="Classes\ConstructorChainingSample.cs" />
     <Compile Include="Attributes\DebuggingSample.cs" />
-    <Compile Include="Classes\ExtensionMethodsSample.cs" />
     <Compile Include="Comparing\CompareSample.cs" />
     <Compile Include="Comparing\EqualityComparer.cs" />
     <Compile Include="Comparing\Equatable.cs" />

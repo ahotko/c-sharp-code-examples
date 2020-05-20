@@ -91,9 +91,6 @@ namespace CodeSamples
 
             var anonymousTypesSample = new AnonymousTypesSample();
             anonymousTypesSample.Execute();
-
-            var extensionMethodsSample = new ExtensionMethodsSample();
-            extensionMethodsSample.Execute();
             #endregion
 
             #region Attributes

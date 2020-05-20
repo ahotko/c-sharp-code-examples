@@ -36,7 +36,8 @@ A collection of code samples I have used C# and think they might be useful in th
   * [`Dictionary`](CSharp%20Code%20Samples/CodeSamples/UsefulClasses/Dictionaries.cs#L42) Additional links: [Link](https://www.dotnetperls.com/dictionary)
   * [`OrderedDictionary`](CSharp%20Code%20Samples/CodeSamples/UsefulClasses/Dictionaries.cs#L50) (requires [`System.Collections.Specialized`](https://www.nuget.org/packages/System.Collections.Specialized/)); Additional links: [Link](https://www.geeksforgeeks.org/c-sharp-ordereddictionary-class/)
   * [`SortedDictionary`](CSharp%20Code%20Samples/CodeSamples/UsefulClasses/Dictionaries.cs#L65) Additional links: [Link](https://www.dotnetperls.com/sorteddictionary)
-* [Extension Methods](CSharp%20Code%20Samples/CodeSamples/Classes/ExtensionMethodsSample.cs)
+* [Extension Methods](CSharp%20Code%20Samples/CodeSamples/Alterations/Extensions/ClassExtensionSample.cs)
+* [Garbage Collection](CSharp%20Code%20Samples/CodeSamples/Useful/GarbageCollectionSample.cs) 
 * [Implicit/Explicit Conversion operators](CSharp%20Code%20Samples/CodeSamples/Alterations/EntityConversionSample.cs)
 * [Interface](CSharp%20Code%20Samples/CodeSamples/ISampleExecute.cs)
 * [`LINQ`](CSharp%20Code%20Samples/CodeSamples/Useful/LinqSample.cs)
@@ -48,6 +49,9 @@ A collection of code samples I have used C# and think they might be useful in th
   * Select Samples with value between 
 * [Object Pool](CSharp%20Code%20Samples/CodeSamples/UsefulClasses/ObjectPoolSample.cs)
 * [Operator Overloading](CSharp%20Code%20Samples/CodeSamples/Alterations/OperatorOverloadingSample.cs) Additional links: [Link](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/operators/operator-overloading)
+* [SOLID](CSharp%20Code%20Samples/CodeSamples/SOLID)
+  * [Single Responsibility Principle](CSharp%20Code%20Samples/CodeSamples/SOLID/S01-SingleResponsibilityPrinciple_SRP)
+  * [Inversion of Control](CSharp%20Code%20Samples/CodeSamples/SOLID/S04-InversionOfControl_IoC)
 * [Syntactic Sugars](CSharp%20Code%20Samples/CodeSamples/SyntacticSugars)
   * [Auto Property](CSharp%20Code%20Samples/CodeSamples/SyntacticSugars/PropertiesSample.cs#L34)
   * [Auto Property with default value](CSharp%20Code%20Samples/CodeSamples/SyntacticSugars/PropertiesSample.cs#L35)
@@ -57,6 +61,8 @@ A collection of code samples I have used C# and think they might be useful in th
   * [Pattern Matching](CSharp%20Code%20Samples/CodeSamples/SyntacticSugars/PatternMatchingSample.cs)
 * [Threading](CSharp%20Code%20Samples/CodeSamples/MultiThreading)
   * [`BackgroundWorker`](CSharp%20Code%20Samples/CodeSamples/MultiThreading/BackgroundWorkerSample.cs)
+  * [`Thread`](CSharp%20Code%20Samples/CodeSamples/MultiThreading/ThreadSample.cs)
+* [Timing](CSharp%20Code%20Samples/CodeSamples/Timing)
 * [Tuple Deconstruction](CSharp%20Code%20Samples/CodeSamples/TupleDeconstruction) (requires [`System.ValueTuple`](https://www.nuget.org/packages/System.ValueTuple/)); Additional links: [Link](https://docs.microsoft.com/en-us/dotnet/csharp/deconstruct)
 
   
