@@ -1,5 +1,19 @@
 ﻿#if !DEBUG
 #define RELEASE
+#else
+#define WERE_OK
+#endif
+
+#if DEBUG
+#warning This is good as it is run in Debug mode
+#endif
+
+#if (DEBUG && WERE_OK)
+#undef WERE_OK
+#endif
+
+#if !DEBUG
+#error This should only be run in Debug mode
 #endif
 
 using System;
