@@ -63,6 +63,7 @@
     <Compile Include="Comparing\CompareSample.cs" />
     <Compile Include="Comparing\EqualityComparer.cs" />
     <Compile Include="Comparing\Equatable.cs" />
+    <Compile Include="ConditionalDefines\ConditionalDefinesSample.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="ISampleExecute.cs" />
     <Compile Include="MultiThreading\BackgroundWorkerSample.cs" />

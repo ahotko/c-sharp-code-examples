@@ -2,6 +2,7 @@
 using CodeSamples.Attributes;
 using CodeSamples.Classes;
 using CodeSamples.Comparing;
+using CodeSamples.ConditionalDefines;
 using CodeSamples.MultiThreading;
 using CodeSamples.Patterns;
 using CodeSamples.SOLID.S01_SingleResponsibilityPrinciple_SRP;
@@ -135,6 +136,11 @@ namespace CodeSamples
             #region Class Extensions
             var classExtensionSample = new ClassExtensionSample();
             classExtensionSample.Execute();
+            #endregion
+
+            #region Conditional defines
+            var conditionalDefinesSample = new ConditionalDefinesSample();
+            conditionalDefinesSample.Execute();
             #endregion
 
             Console.WriteLine();
