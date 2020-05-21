@@ -4,6 +4,9 @@ using CodeSamples.Alterations.Extensions;
 
 namespace CodeSamples.Enums
 {
+    /// <summary>
+    /// Classic enum
+    /// </summary>
     internal enum WeekDay
     {
         Monday,
@@ -15,6 +18,9 @@ namespace CodeSamples.Enums
         Sunday
     }
 
+    /// <summary>
+    /// Classic enum with type and defined values
+    /// </summary>
     internal enum Priority : short
     {
         Lowest = -2,
@@ -24,6 +30,9 @@ namespace CodeSamples.Enums
         Highest = 2
     }
 
+    /// <summary>
+    /// Flags enum
+    /// </summary>
     [Flags]
     internal enum SidesAndCorners
     {
@@ -41,6 +50,9 @@ namespace CodeSamples.Enums
         Full = Top | Bottom | Left | Right
     }
 
+    /// <summary>
+    /// Enum with description attribute
+    /// </summary>
     internal enum Status
     {
         [Description("Not Completed")]
