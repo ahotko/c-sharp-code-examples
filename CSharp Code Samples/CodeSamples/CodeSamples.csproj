@@ -65,6 +65,7 @@
     <Compile Include="Comparing\Equatable.cs" />
     <Compile Include="ConditionalDefines\ConditionalDefinesSample.cs" />
     <Compile Include="Constants.cs" />
+    <Compile Include="Enums\EnumSample.cs" />
     <Compile Include="ISampleExecute.cs" />
     <Compile Include="MultiThreading\BackgroundWorkerSample.cs" />
     <Compile Include="MultiThreading\MultithreadingSample.cs" />

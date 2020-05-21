@@ -3,6 +3,7 @@ using CodeSamples.Attributes;
 using CodeSamples.Classes;
 using CodeSamples.Comparing;
 using CodeSamples.ConditionalDefines;
+using CodeSamples.Enums;
 using CodeSamples.MultiThreading;
 using CodeSamples.Patterns;
 using CodeSamples.SOLID.S01_SingleResponsibilityPrinciple_SRP;
@@ -141,6 +142,11 @@ namespace CodeSamples
             #region Conditional defines
             var conditionalDefinesSample = new ConditionalDefinesSample();
             conditionalDefinesSample.Execute();
+            #endregion
+
+            #region Enums
+            var enumSample = new EnumSample();
+            enumSample.Execute();
             #endregion
 
             Console.WriteLine();
