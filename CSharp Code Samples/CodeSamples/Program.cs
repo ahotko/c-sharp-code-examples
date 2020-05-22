@@ -4,6 +4,7 @@ using CodeSamples.Classes;
 using CodeSamples.Comparing;
 using CodeSamples.ConditionalDefines;
 using CodeSamples.Enums;
+using CodeSamples.Exceptions;
 using CodeSamples.MultiThreading;
 using CodeSamples.Patterns;
 using CodeSamples.SOLID.S01_SingleResponsibilityPrinciple_SRP;
@@ -157,6 +158,11 @@ namespace CodeSamples
             #region Generics
             var genericsSample = new GenericsSample();
             genericsSample.Execute();
+            #endregion
+
+            #region Exceptions
+            var exceptionsSample = new ExceptionsSample();
+            exceptionsSample.Execute();
             #endregion
 
             Console.WriteLine();
