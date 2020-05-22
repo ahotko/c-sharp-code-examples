@@ -149,6 +149,11 @@ namespace CodeSamples
             enumSample.Execute();
             #endregion
 
+            #region Arithmetic Overflow
+            var overflowCheckSample = new OverflowCheckSample();
+            overflowCheckSample.Execute();
+            #endregion
+
             Console.WriteLine();
             Console.WriteLine("End Code Samples");
 

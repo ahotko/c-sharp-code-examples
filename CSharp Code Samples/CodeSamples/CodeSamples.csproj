@@ -105,6 +105,7 @@
     <Compile Include="Useful\GarbageCollectionSample.cs" />
     <Compile Include="Useful\LinqSample.cs" />
     <Compile Include="Classes\ClassAndMethodNamesSample.cs" />
+    <Compile Include="Useful\OverflowCheckSample.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
