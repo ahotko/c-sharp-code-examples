@@ -160,6 +160,22 @@ namespace CodeSamples.Classes
         }
     }
 
+    internal class GenericClassOnlyEnum<T> where T : System.Enum
+    {
+        public void Go()
+        {
+            Console.WriteLine($"Hello! I am {this.GetType().Name} and my main element is of type {typeof(T)}.");
+        }
+    }
+
+    internal class GenericClassCombined<T, U> where T : unmanaged where U : ISomeInterface
+    {
+        public void Go()
+        {
+            Console.WriteLine($"Hello! I am {this.GetType().Name} and my elements are of type {typeof(T)} and {typeof(U)}.");
+        }
+    }
+
     public class GenericsSample : SampleExecute
     {
         public override void Execute()
