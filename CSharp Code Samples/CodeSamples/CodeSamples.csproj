@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -60,6 +61,7 @@
     <Compile Include="Classes\CallerInfoSample.cs" />
     <Compile Include="Classes\ConstructorChainingSample.cs" />
     <Compile Include="Attributes\DebuggingSample.cs" />
+    <Compile Include="Classes\GenericsSample.cs" />
     <Compile Include="Comparing\CompareSample.cs" />
     <Compile Include="Comparing\EqualityComparer.cs" />
     <Compile Include="Comparing\Equatable.cs" />

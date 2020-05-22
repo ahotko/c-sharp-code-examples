@@ -154,6 +154,11 @@ namespace CodeSamples
             overflowCheckSample.Execute();
             #endregion
 
+            #region Generics
+            var genericsSample = new GenericsSample();
+            genericsSample.Execute();
+            #endregion
+
             Console.WriteLine();
             Console.WriteLine("End Code Samples");
 
