@@ -7,6 +7,7 @@ using CodeSamples.Enums;
 using CodeSamples.Exceptions;
 using CodeSamples.MultiThreading;
 using CodeSamples.Patterns;
+using CodeSamples.Settings;
 using CodeSamples.SOLID.S01_SingleResponsibilityPrinciple_SRP;
 using CodeSamples.SOLID.S04_InversionOfControl_IoC;
 using CodeSamples.SyntacticSugars;
@@ -163,6 +164,11 @@ namespace CodeSamples
             #region Exceptions
             var exceptionsSample = new ExceptionsSample();
             exceptionsSample.Execute();
+            #endregion
+
+            #region Settings
+            var settingsSample = new SettingsSample();
+            settingsSample.Execute();
             #endregion
 
             Console.WriteLine();

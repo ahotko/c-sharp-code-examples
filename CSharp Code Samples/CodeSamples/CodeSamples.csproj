@@ -84,7 +84,19 @@
     <Compile Include="Patterns\Behavioral\StrategyPattern.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\OtherSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>OtherSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="SampleExecute.cs" />
+    <Compile Include="Settings.cs" />
+    <Compile Include="Settings\SettingsSample.cs" />
     <Compile Include="SOLID\S01-SingleResponsibilityPrinciple_SRP\GarageStation.cs" />
     <Compile Include="SOLID\S01-SingleResponsibilityPrinciple_SRP\GarageUtility.cs" />
     <Compile Include="SOLID\S01-SingleResponsibilityPrinciple_SRP\IGarageUtility.cs" />
@@ -114,6 +126,14 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Properties\OtherSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>OtherSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
