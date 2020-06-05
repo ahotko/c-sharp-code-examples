@@ -4,19 +4,9 @@ namespace CodeSamples
 {
     public abstract class SampleExecute : ISampleExecute
     {
-        private ConsoleColor _oldForeColor;
-        private ConsoleColor _oldBackColor;
-
-        private void PushColors()
-        {
-            _oldForeColor = Console.ForegroundColor;
-            _oldBackColor = Console.BackgroundColor;
-        }
-
         private void PopColors()
         {
-            Console.ForegroundColor = _oldForeColor;
-            Console.BackgroundColor = _oldBackColor;
+            Console.ResetColor();
         }
 
         private void SetTitleColor()
@@ -31,7 +21,6 @@ namespace CodeSamples
 
         public void Title(string title)
         {
-            PushColors();
             SetTitleColor();
             Console.WriteLine();
             Console.WriteLine(title);
@@ -41,7 +30,6 @@ namespace CodeSamples
 
         public void Section(string title)
         {
-            PushColors();
             SetSectionColor();
             Console.WriteLine(title);
             PopColors();
