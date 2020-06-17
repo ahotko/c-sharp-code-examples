@@ -39,19 +39,86 @@ namespace CodeSamples.Structures
             [FieldOffset(3)]
             public readonly byte D;
 
-            [FieldOffset(0)] 
+            [FieldOffset(0)]
             public readonly uint UnsignedInteger;
+        }
+
+
+        [StructLayout(LayoutKind.Explicit)]
+        public struct FloatAndUint
+        {
+            [FieldOffset(0)]
+            public float FloatValue;
+
+            [FieldOffset(0)]
+            public uint UintValue;
+        }
+
+        [StructLayout(LayoutKind.Explicit)]
+        public struct DoubleAndUlong
+        {
+            [FieldOffset(0)]
+            public double DoubleValue;
+
+            [FieldOffset(0)]
+            public ulong UlongValue;
+        }
+
+        [Flags]
+        internal enum DosFileAttributes : byte
+        {
+            None = 0,
+            ReadOnly = 1,
+            Archive = 2,
+            Compressed = 4,
+            Hidden = 8,
+            System = 16,
+            Encrypted = 32,
+            Indexed = 64,
+            Temporary = 128
+        }
+
+        [StructLayout(LayoutKind.Explicit)]
+        internal struct EnumInStruct
+        {
+            [FieldOffset(0)]
+            public uint FileHeader;
+
+            [FieldOffset(3)]
+            public DosFileAttributes Attributes;
         }
 
         public override void Execute()
         {
-            Title("FilesSampleExecute");
+            Title("StructSampleExecute");
 
+            Section("Compose bytes into int");
             var makeAnIntFromBytes = new FourBytesMakeAnInteger(0x11, 0x22, 0x33, 0x44);
             Console.WriteLine($"We have four bytes (0x{makeAnIntFromBytes.A:X2}, 0x{makeAnIntFromBytes.B:X2}, 0x{makeAnIntFromBytes.C:X2}, 0x{makeAnIntFromBytes.D:X2}), we composed them into an integer (0x{makeAnIntFromBytes.UnsignedInteger:X8}).");
 
             var makeBytesFromInt = new FourBytesMakeAnInteger(0xFFEEDDAA);
             Console.WriteLine($"We have an integer (0x{makeBytesFromInt.UnsignedInteger:X8}) we divided into four bytes (0x{makeBytesFromInt.A:X2}, 0x{makeBytesFromInt.B:X2}, 0x{makeBytesFromInt.C:X2}, 0x{makeBytesFromInt.D:X2}).");
+
+            Section("Convert float to uint");
+            var floatAndUint = new FloatAndUint();
+            floatAndUint.FloatValue = 3.1415926f;
+            Console.WriteLine($"We have an float ({floatAndUint.FloatValue}) we can show as uint (in hex) = (0x{floatAndUint.UintValue:X4}).");
+            floatAndUint.UintValue = 0x40490fda;  //PI in IEEE-754 format
+            Console.WriteLine($"We have an uint (in hex) = (0x{floatAndUint.UintValue:X4}) we can show as float = ({floatAndUint.FloatValue}).");
+
+            Section("Convert double to ulong");
+            var doubleAndUlong = new DoubleAndUlong();
+            doubleAndUlong.DoubleValue = Math.E;
+            Console.WriteLine($"We have an float ({doubleAndUlong.DoubleValue}) we can show as uint (in hex) = (0x{doubleAndUlong.UlongValue:X8}).");
+            doubleAndUlong.UlongValue = 0x400921fb54442d18;  //PI in IEEE-754 format
+            Console.WriteLine($"We have an uint (in hex) = (0x{doubleAndUlong.UlongValue:X8}) we can show as float = ({doubleAndUlong.DoubleValue}).");
+
+            Section("Convert float to uint");
+            var random = new Random();
+            byte attributes = (byte)random.Next(1, 255);
+            var enumInStruct = new EnumInStruct();
+            enumInStruct.FileHeader = (uint)((attributes << 24) | 0x345678);
+            Console.WriteLine($"We have an Fileheader (in hex) = (0x{enumInStruct.FileHeader:X4}), we can extract Attributes = ({enumInStruct.Attributes.ToString("g")}).");
 
             Finish();
         }
