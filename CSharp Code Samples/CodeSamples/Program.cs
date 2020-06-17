@@ -183,6 +183,11 @@ namespace CodeSamples
             structSample.Execute();
             #endregion
 
+            #region Static Classes
+            var staticSample = new StaticSample();
+            staticSample.Execute();
+            #endregion
+
             Console.WriteLine();
             Console.WriteLine("End Code Samples");
 
