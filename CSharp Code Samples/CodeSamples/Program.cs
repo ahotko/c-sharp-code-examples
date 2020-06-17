@@ -5,11 +5,13 @@ using CodeSamples.Comparing;
 using CodeSamples.ConditionalDefines;
 using CodeSamples.Enums;
 using CodeSamples.Exceptions;
+using CodeSamples.Files;
 using CodeSamples.MultiThreading;
 using CodeSamples.Patterns;
 using CodeSamples.Settings;
 using CodeSamples.SOLID.S01_SingleResponsibilityPrinciple_SRP;
 using CodeSamples.SOLID.S04_InversionOfControl_IoC;
+using CodeSamples.Structures;
 using CodeSamples.SyntacticSugars;
 using CodeSamples.Timing;
 using CodeSamples.TupleDeconstruction;
@@ -169,6 +171,16 @@ namespace CodeSamples
             #region Settings
             var settingsSample = new SettingsSample();
             settingsSample.Execute();
+            #endregion
+
+            #region Files
+            var filesSample = new FilesSample();
+            filesSample.Execute();
+            #endregion
+
+            #region Struct
+            var structSample = new StructSample();
+            structSample.Execute();
             #endregion
 
             Console.WriteLine();

@@ -63,11 +63,13 @@
     <Compile Include="Alterations\OperatorOverloadingSample.cs" />
     <Compile Include="Attributes\ConditionalSample.cs" />
     <Compile Include="Attributes\ObsoleteSample.cs" />
+    <Compile Include="Classes\AccessModifiersSample.cs" />
     <Compile Include="Classes\AnonymousTypesSample.cs" />
     <Compile Include="Classes\CallerInfoSample.cs" />
     <Compile Include="Classes\ConstructorChainingSample.cs" />
     <Compile Include="Attributes\DebuggingSample.cs" />
     <Compile Include="Classes\GenericsSample.cs" />
+    <Compile Include="Classes\StaticSample.cs" />
     <Compile Include="Comparing\CompareSample.cs" />
     <Compile Include="Comparing\EqualityComparer.cs" />
     <Compile Include="Comparing\Equatable.cs" />
@@ -75,6 +77,7 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Enums\EnumSample.cs" />
     <Compile Include="Exceptions\ExceptionsSample.cs" />
+    <Compile Include="Files\FilesSample.cs" />
     <Compile Include="ISampleExecute.cs" />
     <Compile Include="MultiThreading\BackgroundWorkerSample.cs" />
     <Compile Include="MultiThreading\MultithreadingSample.cs" />
@@ -113,6 +116,7 @@
     <Compile Include="SOLID\S04-InversionOfControl_IoC\IDuckQuack.cs" />
     <Compile Include="SOLID\S04-InversionOfControl_IoC\InversionOfControlSample.cs" />
     <Compile Include="SOLID\S04-InversionOfControl_IoC\Quacks.cs" />
+    <Compile Include="Structures\StructSample.cs" />
     <Compile Include="SyntacticSugars\NullSample.cs" />
     <Compile Include="SyntacticSugars\PatternMatchingSample.cs" />
     <Compile Include="SyntacticSugars\PropertiesSample.cs" />

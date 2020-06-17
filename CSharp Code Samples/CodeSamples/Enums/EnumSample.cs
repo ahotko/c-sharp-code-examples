@@ -116,7 +116,7 @@ namespace CodeSamples.Enums
             Console.WriteLine("Status Enum values:");
             foreach (Status value in statusValues)
             {
-                Console.WriteLine($"value={value.ToString()}, description={value.GetDescription<Status>()}");
+                Console.WriteLine($"ordinal={(int)value}, value={value.ToString()}, description={value.GetDescription<Status>()}");
             }
             LineBreak();
 
