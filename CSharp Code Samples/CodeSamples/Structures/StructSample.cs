@@ -78,11 +78,26 @@ namespace CodeSamples.Structures
             Temporary = 128
         }
 
+        internal enum DosFileOwnership : byte
+        {
+            None = 0,
+            User = 1,
+            System = 2,
+            Administrator = 3,
+            Network = 4,
+            Domain = 5,
+            Creator = 6,
+            Editor = 7
+        }
+
         [StructLayout(LayoutKind.Explicit)]
         internal struct EnumInStruct
         {
             [FieldOffset(0)]
             public uint FileHeader;
+
+            [FieldOffset(2)]
+            public DosFileOwnership Ownership;
 
             [FieldOffset(3)]
             public DosFileAttributes Attributes;
@@ -102,23 +117,24 @@ namespace CodeSamples.Structures
             Section("Convert float to uint");
             var floatAndUint = new FloatAndUint();
             floatAndUint.FloatValue = 3.1415926f;
-            Console.WriteLine($"We have an float ({floatAndUint.FloatValue}) we can show as uint (in hex) = (0x{floatAndUint.UintValue:X4}).");
+            Console.WriteLine($"We have an float ({floatAndUint.FloatValue}) we can show as uint (in hex) = (0x{floatAndUint.UintValue:X8}).");
             floatAndUint.UintValue = 0x40490fda;  //PI in IEEE-754 format
-            Console.WriteLine($"We have an uint (in hex) = (0x{floatAndUint.UintValue:X4}) we can show as float = ({floatAndUint.FloatValue}).");
+            Console.WriteLine($"We have an uint (in hex) = (0x{floatAndUint.UintValue:X8}) we can show as float = ({floatAndUint.FloatValue}).");
 
             Section("Convert double to ulong");
             var doubleAndUlong = new DoubleAndUlong();
             doubleAndUlong.DoubleValue = Math.E;
-            Console.WriteLine($"We have an float ({doubleAndUlong.DoubleValue}) we can show as uint (in hex) = (0x{doubleAndUlong.UlongValue:X8}).");
+            Console.WriteLine($"We have an float ({doubleAndUlong.DoubleValue}) we can show as uint (in hex) = (0x{doubleAndUlong.UlongValue:X16}).");
             doubleAndUlong.UlongValue = 0x400921fb54442d18;  //PI in IEEE-754 format
-            Console.WriteLine($"We have an uint (in hex) = (0x{doubleAndUlong.UlongValue:X8}) we can show as float = ({doubleAndUlong.DoubleValue}).");
+            Console.WriteLine($"We have an uint (in hex) = (0x{doubleAndUlong.UlongValue:X16}) we can show as float = ({doubleAndUlong.DoubleValue}).");
 
-            Section("Convert float to uint");
+            Section("Enum in struct");
             var random = new Random();
             byte attributes = (byte)random.Next(1, 255);
+            byte ownership = (byte)(random.Next(1, 255) % 8);
             var enumInStruct = new EnumInStruct();
-            enumInStruct.FileHeader = (uint)((attributes << 24) | 0x345678);
-            Console.WriteLine($"We have an Fileheader (in hex) = (0x{enumInStruct.FileHeader:X4}), we can extract Attributes = ({enumInStruct.Attributes.ToString("g")}).");
+            enumInStruct.FileHeader = (uint)((attributes << 24) | (ownership << 16) | 0x5678);
+            Console.WriteLine($"We have a FileHeader (in hex) = (0x{enumInStruct.FileHeader:X8}), we can extract Attributes = ({enumInStruct.Attributes.ToString("g")}) and ownership = ({enumInStruct.Ownership.ToString("g")}).");
 
             Finish();
         }
