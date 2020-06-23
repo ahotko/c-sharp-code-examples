@@ -113,6 +113,28 @@ namespace CodeSamples.Attributes
         {
             Console.WriteLine($"Debugger stepped through this method.");
         }
+
+        /// <summary>
+        /// Trace and debug messages
+        /// This shows in Immediate Window (Ctrl + Alt + I)
+        /// e.g. Input in Immediate window (after build): ?(new DebuggingSample().Execute())
+        /// </summary>
+        public void ImmediateWindowMessages()
+        {
+            Trace.WriteLine("Some Trace messages to follow:");
+            Trace.IndentSize = 2;
+            Trace.Indent();
+            Trace.TraceInformation("This is Trace information.");
+            Trace.Indent();
+            Trace.TraceInformation("This is Trace information - indented.");
+            Trace.Unindent();
+            Trace.TraceWarning("This is Trace Warning.");
+            Trace.TraceError("This is Trace Error.");
+            Trace.Unindent();
+            Trace.Flush();
+            //
+            Debug.WriteLine("This is Debug Line.");
+        }
     }
 
     public class DebuggingSample : SampleExecute
@@ -121,12 +143,17 @@ namespace CodeSamples.Attributes
         {
             Title("DebuggingSampleExecute");
             Section("Creating class (if breakpoint is used here, debugger output will be formatted as in DebuggerDisplay())");
+
             DebuggerExamplesDebuggerDisplay debuggerExample = new DebuggerExamplesDebuggerDisplay();
             //set breakpoint on next line and hover over "debuggerExample" variable
             debuggerExample.DebuggerStepThroughMethod();
             debuggerExample.ExecuteOnlyInDebugMode();
             debuggerExample.ExecuteOnlyInReleaseMode();
             debuggerExample.RuntimeDebuggerAttached();
+
+            Section("Immediate Window Messages");
+            debuggerExample.ImmediateWindowMessages();
+
             Finish();
         }
     }
