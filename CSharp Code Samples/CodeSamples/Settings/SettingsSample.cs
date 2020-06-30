@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CodeSamples.Settings
 {
@@ -43,6 +39,9 @@ namespace CodeSamples.Settings
 
             LoadMainSettings();
             LoadOtherSettings();
+
+            var configurationManagerSnippets = new ConfigurationManagerSnippets();
+            configurationManagerSnippets.Run();
 
             Finish();
         }

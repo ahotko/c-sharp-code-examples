@@ -39,6 +39,7 @@
     <Reference Include="System.Collections.Specialized, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Collections.Specialized.4.3.0\lib\net46\System.Collections.Specialized.dll</HintPath>
     </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -105,6 +106,7 @@
     </Compile>
     <Compile Include="SampleExecute.cs" />
     <Compile Include="Settings.cs" />
+    <Compile Include="Settings\ConfigurationManagerSnippets.cs" />
     <Compile Include="Settings\SettingsSample.cs" />
     <Compile Include="SOLID\S01-SingleResponsibilityPrinciple_SRP\GarageStation.cs" />
     <Compile Include="SOLID\S01-SingleResponsibilityPrinciple_SRP\GarageUtility.cs" />
