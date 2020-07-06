@@ -188,6 +188,11 @@ namespace CodeSamples
             staticSample.Execute();
             #endregion
 
+            #region Collection Initializers
+            var collectionInitializerSamples = new CollectionInitializerSamples();
+            collectionInitializerSamples.Execute();
+            #endregion
+
             Console.WriteLine();
             Console.WriteLine("End Code Samples");
 

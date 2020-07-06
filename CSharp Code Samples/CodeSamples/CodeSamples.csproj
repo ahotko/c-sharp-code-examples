@@ -127,6 +127,7 @@
     <Compile Include="Timing\TimingSample.cs" />
     <Compile Include="Timing\TimingStopwatch.cs" />
     <Compile Include="TupleDeconstruction\TupleDeconstruction.cs" />
+    <Compile Include="UsefulClasses\CollectionInitializerSamples.cs" />
     <Compile Include="UsefulClasses\Dictionaries.cs" />
     <Compile Include="UsefulClasses\ObjectPoolSample.cs" />
     <Compile Include="UsefulClasses\SpanSample.cs" />
