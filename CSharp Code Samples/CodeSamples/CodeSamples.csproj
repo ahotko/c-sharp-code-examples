@@ -63,6 +63,7 @@
     <Compile Include="Alterations\EntityConversionSample.cs" />
     <Compile Include="Alterations\OperatorOverloadingSample.cs" />
     <Compile Include="Attributes\ConditionalSample.cs" />
+    <Compile Include="Attributes\CustomAttributesSample.cs" />
     <Compile Include="Attributes\ObsoleteSample.cs" />
     <Compile Include="Classes\AccessModifiersSample.cs" />
     <Compile Include="Classes\AnonymousTypesSample.cs" />
@@ -104,6 +105,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="RegularExpressions\RegExSample.cs" />
     <Compile Include="SampleExecute.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Settings\ConfigurationManagerSnippets.cs" />

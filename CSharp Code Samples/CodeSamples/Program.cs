@@ -8,6 +8,7 @@ using CodeSamples.Exceptions;
 using CodeSamples.Files;
 using CodeSamples.MultiThreading;
 using CodeSamples.Patterns;
+using CodeSamples.RegularExpressions;
 using CodeSamples.Settings;
 using CodeSamples.SOLID.S01_SingleResponsibilityPrinciple_SRP;
 using CodeSamples.SOLID.S04_InversionOfControl_IoC;
@@ -191,6 +192,11 @@ namespace CodeSamples
             #region Collection Initializers
             var collectionInitializerSamples = new CollectionInitializerSamples();
             collectionInitializerSamples.Execute();
+            #endregion
+
+            #region [Regular Expressions]
+            var regularExpressionSample = new RegExSample();
+            regularExpressionSample.Execute();
             #endregion
 
             Console.WriteLine();

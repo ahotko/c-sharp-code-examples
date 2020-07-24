@@ -67,7 +67,7 @@ namespace CodeSamples.Attributes
         public string StringValue { get; set; } = "SomeStringValue";
         public int GetIntValue()
         {
-            return 5*2;
+            return 5 * 2;
         }
 
         /// <summary>
@@ -106,6 +106,7 @@ namespace CodeSamples.Attributes
         {
             string debuggerAttached = Debugger.IsAttached ? "is" : "is not";
             Console.WriteLine($"Runtime Debugger Checking: Debugger {debuggerAttached} attached");
+            Console.WriteLine($"Assuming we're running {(Debugger.IsAttached ? "from IDE" : "standalone")}");
         }
 
         [DebuggerStepThrough]
