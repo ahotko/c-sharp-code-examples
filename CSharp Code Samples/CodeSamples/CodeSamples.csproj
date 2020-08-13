@@ -41,6 +41,7 @@
     </Reference>
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,6 +73,7 @@
     <Compile Include="Attributes\DebuggingSample.cs" />
     <Compile Include="Classes\GenericsSample.cs" />
     <Compile Include="Classes\StaticSample.cs" />
+    <Compile Include="ClipboardUse\ClipboardSample.cs" />
     <Compile Include="Comparing\CompareSample.cs" />
     <Compile Include="Comparing\EqualityComparer.cs" />
     <Compile Include="Comparing\Equatable.cs" />
