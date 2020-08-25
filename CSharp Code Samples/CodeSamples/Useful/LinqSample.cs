@@ -160,6 +160,32 @@ namespace CodeSamples.Useful
             }
         }
 
+        private void SumAgeByLastnameAndPlaceGroupingWithLet()
+        {
+            var ageLastnameGroups =
+                from sample in _sampleList
+                group sample by new 
+                { 
+                    sample.LastName, 
+                    sample.Place
+                } 
+                into sampleGroup
+                let sumAge = sampleGroup.Sum(x => x.Age)
+                let memberCount = sampleGroup.Count()
+                select
+                new
+                {
+                    GroupingKey = sampleGroup.Key,
+                    SumAge = sumAge,
+                    CountMembers = memberCount
+                };
+            //use result
+            foreach (var sample in ageLastnameGroups)
+            {
+                Console.WriteLine($"Lastname = {sample.GroupingKey.LastName}, Place = {sample.GroupingKey.Place}, {sample.CountMembers} member(s), SumAge = {sample.SumAge}");
+            }
+        }
+
         private void SumAgeByLastnameAndPlaceGroupingOrdered()
         {
             var ageLastnameGroups =
@@ -282,6 +308,9 @@ namespace CodeSamples.Useful
             LineBreak();
             Section("Group by LastName and Place");
             SumAgeByLastnameAndPlaceGrouping();
+            LineBreak();
+            Section("Group by LastName and Place (using 'let' keyword)");
+            SumAgeByLastnameAndPlaceGroupingWithLet();
             LineBreak();
             Section("Group by LastName (ordered by member count, desc)");
             SumAgeByLastnameGroupingOrderedDescending();
