@@ -42,7 +42,7 @@ namespace CodeSamples.ClipboardUse
                 byte[] bytes = new byte[] { (byte)(cutOperation ? DropEffectMove : DropEffectCopy), 0x00, 0x00, 0x00 };
                 memory.Write(bytes, 0, bytes.Length);
 
-                data.SetData("Preferred DropEffect", memory);
+                data.SetData(FileDropEffect, memory);
                 Clipboard.SetDataObject(data);
             }
         }
