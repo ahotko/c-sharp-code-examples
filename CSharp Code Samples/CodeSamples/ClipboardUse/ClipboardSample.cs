@@ -6,6 +6,21 @@ namespace CodeSamples.ClipboardUse
 {
     internal class ClipboardSample : SampleExecute
     {
+        /// <summary>
+        /// CFSTR_PREFERREDDROPEFFECT
+        /// </summary>
+        public const string FileDropEffect = "Preferred DropEffect";
+
+        /// <summary>
+        /// DROPEFFECT_MOVE
+        /// </summary>
+        public const byte DropEffectMove = 0x02;
+
+        /// <summary>
+        /// DROPEFFECT_COPY
+        /// </summary>
+        public const byte DropEffectCopy = 0x05;
+
         private bool HasFilesInClipboard()
         {
             return Clipboard.GetDataObject().GetDataPresent(DataFormats.FileDrop);
@@ -24,7 +39,7 @@ namespace CodeSamples.ClipboardUse
                 //data.SetData("FileDrop", true, files);
 
                 MemoryStream memory = new MemoryStream(4);
-                byte[] bytes = new byte[] { (byte)(cutOperation ? 0x02 : 0x05), 0x00, 0x00, 0x00 };
+                byte[] bytes = new byte[] { (byte)(cutOperation ? DropEffectMove : DropEffectCopy), 0x00, 0x00, 0x00 };
                 memory.Write(bytes, 0, bytes.Length);
 
                 data.SetData("Preferred DropEffect", memory);
@@ -41,13 +56,13 @@ namespace CodeSamples.ClipboardUse
             IDataObject data = Clipboard.GetDataObject();
 
             string[] files = (string[])data.GetData(DataFormats.FileDrop);
-            MemoryStream stream = (MemoryStream)data.GetData("Preferred DropEffect", true);
+            MemoryStream stream = (MemoryStream)data.GetData(FileDropEffect, true);
 
             int flag = stream.ReadByte();
-            if (flag != 0x02 && flag != 0x05)
+            if (flag != DropEffectMove && flag != DropEffectCopy)
                 return result;
 
-            bool moveFiles = (flag == 0x02);
+            bool moveFiles = (flag == DropEffectMove);
 
             foreach (string file in files)
             {
