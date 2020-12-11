@@ -6,6 +6,16 @@ namespace CodeSamples.ClipboardUse
 {
     internal class ClipboardSample : SampleExecute
     {
+        //https://docs.microsoft.com/en-us/windows/win32/com/dropeffect-constants
+        // Constant         Value       Description
+        //===================================================================
+        //DROPEFFECT_NONE   0           Drop target cannot accept the data.
+        //DROPEFFECT_COPY   1           Drop results in a copy. The original data is untouched by the drag source.
+        //DROPEFFECT_MOVE   2           Drag source should remove the data.
+        //DROPEFFECT_LINK   4           Drag source should create a link to the original data.
+        //DROPEFFECT_SCROLL 0x80000000  Scrolling is about to start or is currently occurring in the target. This value is used in addition to the other values.
+
+
         /// <summary>
         /// CFSTR_PREFERREDDROPEFFECT
         /// </summary>
@@ -14,12 +24,17 @@ namespace CodeSamples.ClipboardUse
         /// <summary>
         /// DROPEFFECT_MOVE
         /// </summary>
-        public const byte DropEffectMove = 0x02;
+        public const uint DropEffectMove = (uint)0x00000002;
 
         /// <summary>
         /// DROPEFFECT_COPY
         /// </summary>
-        public const byte DropEffectCopy = 0x05;
+        public const uint DropEffectCopy = (uint)0x00000005;
+
+        /// <summary>
+        /// DROPEFFECT_SCROLL
+        /// </summary>
+        public const uint DropEffectScroll = (uint)0x80000000;
 
         private bool HasFilesInClipboard()
         {
@@ -38,12 +53,14 @@ namespace CodeSamples.ClipboardUse
                 //IDataObject data = new DataObject();
                 //data.SetData("FileDrop", true, files);
 
-                MemoryStream memory = new MemoryStream(4);
-                byte[] bytes = new byte[] { (byte)(cutOperation ? DropEffectMove : DropEffectCopy), 0x00, 0x00, 0x00 };
-                memory.Write(bytes, 0, bytes.Length);
+                using (MemoryStream memory = new MemoryStream(sizeof(uint)))
+                {
+                    var writer = new BinaryWriter(memory);
+                    writer.Write((cutOperation ? DropEffectMove : DropEffectCopy));
 
-                data.SetData(FileDropEffect, memory);
-                Clipboard.SetDataObject(data);
+                    data.SetData(FileDropEffect, memory);
+                    Clipboard.SetDataObject(data);
+                }
             }
         }
 
@@ -58,11 +75,14 @@ namespace CodeSamples.ClipboardUse
             string[] files = (string[])data.GetData(DataFormats.FileDrop);
             MemoryStream stream = (MemoryStream)data.GetData(FileDropEffect, true);
 
-            int flag = stream.ReadByte();
-            if (flag != DropEffectMove && flag != DropEffectCopy)
-                return result;
+            var reader = new BinaryReader(stream);
 
-            bool moveFiles = (flag == DropEffectMove);
+            uint flags = reader.ReadUInt32();
+
+            if ((flags & DropEffectMove) != DropEffectMove && (flags & DropEffectCopy) != DropEffectCopy)
+                return result;
+            
+            bool moveFiles = ((flags & DropEffectMove) == DropEffectMove);
 
             foreach (string file in files)
             {

@@ -199,6 +199,11 @@ namespace CodeSamples
             regularExpressionSample.Execute();
             #endregion
 
+            #region [Result]
+            var resultSample = new ResultSample();
+            resultSample.Execute();
+            #endregion
+
             Console.WriteLine();
             Console.WriteLine("End Code Samples");
 

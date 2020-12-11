@@ -26,6 +26,26 @@ namespace CodeSamples.Classes
             SampleClass classTwoParams = new SampleClass(3, "Yo! This is a story all about how...");
             //
             Finish();
+
+            // Output:
+            //
+            // ConstructorChainingSampleExecute
+            // ============================================================
+            // Creating class by calling constructor with no params
+            // ============================================================
+            // Constructor with two parameters
+            // Constructor with one parameter
+            // Default Constructor
+            // ============================================================
+            // Creating class by calling constructor with 1 params
+            // ============================================================
+            // Constructor with two parameters
+            // Constructor with one parameter
+            // ============================================================
+            // Creating class by calling constructor with 2 params
+            // ============================================================
+            // Constructor with two parameters
+            // ============================================================
         }
     }
 }

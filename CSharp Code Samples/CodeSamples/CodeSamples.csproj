@@ -139,6 +139,7 @@
     <Compile Include="Useful\LinqSample.cs" />
     <Compile Include="Classes\ClassAndMethodNamesSample.cs" />
     <Compile Include="Useful\OverflowCheckSample.cs" />
+    <Compile Include="Useful\ResultSample.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
