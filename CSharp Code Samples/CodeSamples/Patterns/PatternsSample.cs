@@ -1,5 +1,6 @@
 ﻿using CodeSamples.Patterns.Behavioral;
 using CodeSamples.Patterns.Creational;
+using CodeSamples.Patterns.Structural;
 
 namespace CodeSamples.Patterns
 {
@@ -8,6 +9,7 @@ namespace CodeSamples.Patterns
         public override void Execute()
         {
             Title("PatternsSampleExecute");
+
             Section("Creational Patterns");
             var singleton = new SingletonPatternSample();
             singleton.Execute();
@@ -16,6 +18,7 @@ namespace CodeSamples.Patterns
             var abstractFactory = new AbstractFactoryPatternSample();
             abstractFactory.Execute();
             LineBreak();
+
             Section("Behavioral Patterns");
             var strategy = new StrategyPatternSample();
             strategy.Execute();
@@ -23,6 +26,16 @@ namespace CodeSamples.Patterns
             observer.Execute();
             var state = new StatePatternSample();
             state.Execute();
+            var chainOfResponsibility = new ChainOfResponsibilityPatternSample();
+            chainOfResponsibility.Execute();
+            LineBreak();
+
+            Section("Structural Patterns");
+            var decorator = new DecoratorPatternSample();
+            decorator.Execute();
+            var facade = new FacadePatternSample();
+            facade.Execute();
+
             Finish();
         }
     }
